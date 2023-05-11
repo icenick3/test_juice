@@ -1,0 +1,48 @@
+#photoContainer {
+  width: 50%;
+  @media screen and (max-device-width: 400px) {
+    width: 100%;
+
+  }
+  #mainPhotoContainer{
+    width: 100%;
+    overflow-x: hidden;
+    #photoBlock {
+      width: content-box;
+      display: flex;
+      position: relative;
+      left: 0;
+      &:hover {
+        cursor: grab;
+      }
+      .mainPhoto {
+        width: 100%;
+        border-radius: 20px;
+        padding: 1%;
+
+      }
+    }
+  }
+  #photos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    img {
+      width: 19%;
+      border-radius: 10px;
+      margin: 10px 4px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.noVisible {
+  opacity: 0.6;
+}
+
+.visible{
+  opacity: 1;
+}
+

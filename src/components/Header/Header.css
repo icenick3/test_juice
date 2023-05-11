@@ -1,0 +1,75 @@
+header {
+  width: 60%;
+  position: fixed;
+  top: 38px;
+  display: flex;
+  margin: 0 20%;
+  height: 60px;
+  z-index: 20;
+  background: white;
+  box-sizing: border-box;
+}
+@media screen and (max-device-width: 400px) {
+  header {
+    width: 100%;
+    margin: 0;
+  }
+}
+header #menu {
+  display: flex;
+  width: 25%;
+  padding: 10px;
+  margin: 0 0 0 auto;
+  justify-content: left;
+  align-items: center;
+}
+@media screen and (max-device-width: 400px) {
+  header #menu {
+    padding: 0 0 0 25px;
+  }
+}
+header #menu img {
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+}
+header #logoShop {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media screen and (max-device-width: 400px) {
+  header #logoShop {
+    padding: 0 0 0 0;
+  }
+}
+header #logoShop h1 {
+  text-align: center;
+  font-family: Arial;
+}
+@media screen and (max-device-width: 400px) {
+  header #logoShop h1 {
+    font-size: 20px;
+    padding: 20px 0 20px 0;
+  }
+}
+header #ShoppingCart {
+  position: relative;
+  width: 25%;
+  padding: 10px;
+  margin: 0 auto 0 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+@media screen and (max-device-width: 400px) {
+  header #ShoppingCart {
+    padding: 0 25px 0 0;
+  }
+}
+header #ShoppingCart img {
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=Header.css.map */

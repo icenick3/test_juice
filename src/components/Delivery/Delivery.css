@@ -1,0 +1,88 @@
+#delivery {
+  width: 100%;
+  padding: 0 20px 0 20px;
+  margin: 10px 0;
+}
+#delivery #deliveryDate {
+  font-size: 28px;
+  font-weight: 400;
+}
+#delivery #deliveryDate span {
+  font-size: 16px;
+  font-weight: 400;
+}
+#delivery #deliverySchema {
+  display: flex;
+  margin: 20px 0;
+}
+#delivery #deliverySchema .line {
+  width: 100%;
+  padding: 0 10px;
+}
+#delivery #deliverySchema .line .fg {
+  height: 50%;
+  border-bottom: 2px solid black;
+}
+#delivery #deliveryInfo {
+  display: flex;
+  font-size: 16px;
+}
+#delivery #deliveryInfo #leftInfo {
+  text-align: left;
+  font-size: 16px;
+  width: 33.33%;
+}
+#delivery #deliveryInfo #middleInfo {
+  text-align: center;
+  font-size: 16px;
+  width: 33.33%;
+}
+#delivery #deliveryInfo #rightInfo {
+  text-align: right;
+  font-size: 16px;
+  width: 33.33%;
+}
+#delivery #ShippingInfo {
+  margin: 10px 0 0 0;
+  text-align: left;
+  background: #faf8ff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+}
+#delivery #ShippingInfo img {
+  width: 20px;
+  height: 20px;
+}
+#delivery #ShippingInfo h4 {
+  margin-left: 10px;
+}
+#delivery #ShippingInfo #plus {
+  display: block;
+  margin: 0 10px 0 auto;
+}
+#delivery #ShippingInfo #plus:hover {
+  cursor: pointer;
+}
+#delivery #shippingDetails {
+  width: 100%;
+  border-top: 1px solid #1e1e1e;
+  border-left: 4px solid #d22e2e;
+  text-align: center;
+  box-sizing: border-box;
+}
+#delivery #shippingDetails h4 {
+  margin: 20px 0;
+}
+
+.devLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.nonActive {
+  display: none;
+}
+
+/*# sourceMappingURL=Delivery.css.map */

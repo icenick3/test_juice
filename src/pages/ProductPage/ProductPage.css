@@ -1,0 +1,15 @@
+.description {
+  width: 60%;
+  margin: 0 auto 0 auto;
+  position: relative;
+  top: 98px;
+  display: flex;
+}
+@media screen and (max-device-width: 400px) {
+  .description {
+    width: 90%;
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=ProductPage.css.map */

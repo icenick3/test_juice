@@ -1,0 +1,49 @@
+#photoContainer {
+  width: 50%;
+}
+@media screen and (max-device-width: 400px) {
+  #photoContainer {
+    width: 100%;
+  }
+}
+#photoContainer #mainPhotoContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+#photoContainer #mainPhotoContainer #photoBlock {
+  width: content-box;
+  display: flex;
+  position: relative;
+  left: 0;
+}
+#photoContainer #mainPhotoContainer #photoBlock:hover {
+  cursor: grab;
+}
+#photoContainer #mainPhotoContainer #photoBlock .mainPhoto {
+  width: 100%;
+  border-radius: 20px;
+  padding: 1%;
+}
+#photoContainer #photos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#photoContainer #photos img {
+  width: 19%;
+  border-radius: 10px;
+  margin: 10px 4px;
+}
+#photoContainer #photos img:hover {
+  cursor: pointer;
+}
+
+.noVisible {
+  opacity: 0.6;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=ProductImages.css.map */

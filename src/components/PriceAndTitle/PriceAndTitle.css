@@ -1,0 +1,68 @@
+#PriceInfo {
+  padding: 20px;
+}
+#PriceInfo #stars {
+  margin: 25px 0;
+}
+#PriceInfo #stars #rait {
+  margin: -6px 0;
+}
+#PriceInfo p {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+#PriceInfo p #discount {
+  color: #d22e2e;
+}
+#PriceInfo p #price {
+  padding-left: 10px;
+  color: #a7a7a7;
+  text-decoration: line-through;
+}
+#PriceInfo h3 {
+  margin: 20px 0 10px 0;
+}
+#PriceInfo select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f2ecff;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  transition: outline 0.1s ease-in-out;
+}
+#PriceInfo select:hover {
+  outline: 4px solid mediumpurple;
+  cursor: pointer;
+}
+#PriceInfo #visitors {
+  display: flex;
+  margin: 15px;
+}
+#PriceInfo #visitors #eye {
+  width: 20px;
+  height: 20px;
+  margin: -1px 5px 0 0;
+}
+#PriceInfo #buttonAddToCart {
+  background: black;
+  color: white;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+#PriceInfo #buttonAddToCart:hover {
+  cursor: pointer;
+}
+#PriceInfo #buttonAddToCart #whiteBag {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=PriceAndTitle.css.map */
