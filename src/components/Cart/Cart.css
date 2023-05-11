@@ -1,0 +1,116 @@
+#cart {
+  width: 60%;
+  margin: 200px auto 50px auto;
+}
+#cart h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+#cart #summaryCart {
+  display: flex;
+  justify-content: space-around;
+}
+#cart #summaryCart #products {
+  margin: 30px 0;
+  background: #faf8ff;
+  width: 45%;
+  display: flex;
+  border-radius: 10px;
+}
+#cart #summaryCart #products img {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 10px;
+}
+#cart #summaryCart #products div h4 {
+  margin: 50px 0 20px 0;
+}
+#cart #summaryCart #products #prices {
+  margin: 100px 20px 0 0;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+#cart #summaryCart #totalPrice {
+  width: 45%;
+  background: #faf8ff;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+#cart #summaryCart #totalPrice #subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+#cart #summaryCart #totalPrice #subtotal h4 {
+  margin: 20px 0 0 20px;
+  font-size: 25px;
+}
+#cart #summaryCart #totalPrice #subtotal #pricesInTotal {
+  font-weight: 600;
+  display: flex;
+  font-size: 25px;
+  margin: 20px 20px 0 0;
+}
+#cart #summaryCart #totalPrice #subtotal #pricesInTotal p {
+  margin: 0 5px 0 5px;
+}
+#cart #summaryCart #totalSaving {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #1e1e1e;
+}
+#cart #summaryCart #totalSaving h4 {
+  margin: 0 0 0 20px;
+  font-size: 25px;
+  color: #d22e2e;
+}
+#cart #summaryCart #totalSaving p {
+  font-size: 25px;
+  color: #d22e2e;
+  font-weight: 600;
+  margin: 0 20px 0 0;
+}
+#cart #summaryCart h6 {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+#cart #summaryCart h6 span {
+  color: #d22e2e;
+  text-decoration: underline;
+}
+#cart #summaryCart button {
+  width: 90%;
+  display: block;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  background: black;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+}
+#cart #summaryCart button:hover {
+  cursor: pointer;
+  outline: 2px solid #1e1e1e;
+}
+#cart #summaryCart button img {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.discount {
+  color: #d22e2e;
+}
+
+.realPrice {
+  color: #a7a7a7;
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=Cart.css.map */

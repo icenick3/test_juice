@@ -51,6 +51,14 @@
   font-weight: 600;
   display: flex;
 }
+#delivery .Details #rating {
+  width: 15%;
+  justify-content: right;
+  margin: 0 10px 0 auto;
+}
+#delivery .Details #plusForRating {
+  margin: 0 10px 0 10px;
+}
 #delivery .Details img {
   width: 20px;
   height: 20px;

@@ -3,6 +3,7 @@ import reit from "../../images/raiting.png"
 import './PriceAndTitle.css'
 import eye from '../../images/eye.png'
 import bag from '../../logotypes/whiteBag.png'
+import {Link} from "react-router-dom";
 
 const PriceAndTitle = () => {
     const [visitor, setVisitors] = useState(43)
@@ -39,10 +40,10 @@ useEffect(()=> {
                 <img id="eye" src={eye} alt=""/>
                 <p>{visitor} visitor(s) currently looking at this product</p>
             </div>
-            <button id="buttonAddToCart">
+            <Link id="buttonAddToCart" to="/cart">
                 <img id="whiteBag" src={bag} alt=""/>
-                Add to cart
-            </button>
+                 Add to cart
+            </Link>
         </div>
     );
 };

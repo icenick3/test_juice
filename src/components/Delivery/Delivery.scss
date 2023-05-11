@@ -59,7 +59,14 @@
     font-size: 18px;
     font-weight: 600;
     display: flex;
-
+    #rating {
+      width: 15%;
+      justify-content: right;
+      margin: 0 10px 0 auto;
+    }
+    #plusForRating {
+      margin: 0 10px 0 10px;
+    }
     img {
       width: 20px;
       height: 20px;
@@ -115,3 +122,4 @@
 .Active {
   display: block;
 }
+

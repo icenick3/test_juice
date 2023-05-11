@@ -1,11 +1,8 @@
 header {
   width: 60%;
-  position: fixed;
-  top: 38px;
   display: flex;
   margin: 0 20%;
   height: 60px;
-  z-index: 20;
   background: white;
   box-sizing: border-box;
   @media screen and (max-device-width: 400px) {

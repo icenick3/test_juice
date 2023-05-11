@@ -9,6 +9,9 @@ import plus from '../../logotypes/plus.png'
 import minus from '../../logotypes/minus.png'
 import blackReturn from '../../logotypes/blackReturn.png'
 import redReturn from '../../logotypes/redReturn.png'
+import blackReviews from '../../logotypes/blackReviews.png'
+import redReviews from '../../logotypes/redReviews.png'
+import rating from '../../images/raiting.png'
 
 const Delivery = () => {
     const [activeShipping, setActiveShipping] = useState(false)
@@ -132,7 +135,7 @@ const Delivery = () => {
                     ships.</p>
                 <br/>
             </div>
-            <div  className="Details">
+            <div className="Details">
                 <img ref={returnRef} src={blackReturn} alt=""/>
                 <h4>Returns</h4>
                 <img ref={plusRefReturn} id="plus" src={plus} alt="" onClick={returnsInfo}/>
@@ -150,6 +153,13 @@ const Delivery = () => {
                     Please contact is via our Contact Page if you believe your product is damaged or faulty.Buyer will
                     be responsible for paying for your own shipping costs for returning your item.
                 </p>
+            </div>
+            <div className="Details">
+                <img src={blackReviews} alt=""/>
+                <h4>Reviews</h4>
+                <img id="rating" src={rating} alt=""/>
+                <p>(35)</p>
+                <img id="plusForRating" src={plus} alt=""/>
             </div>
         </div>
     );
