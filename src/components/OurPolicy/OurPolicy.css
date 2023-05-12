@@ -2,6 +2,11 @@
   width: 100%;
   margin: 160px 0 0 0;
 }
+@media screen and (max-device-width: 500px) {
+  #ourPolicy {
+    display: none;
+  }
+}
 #ourPolicy #img {
   width: 100%;
   background: #faf8ff;

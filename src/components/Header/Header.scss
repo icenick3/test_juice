@@ -1,6 +1,5 @@
 header {
   width: 100%;
-  //border-bottom: 2px solid #1e1e1e;
   position: fixed;
   top: 38px;
   left: 0;
@@ -8,6 +7,9 @@ header {
   z-index: 20;
   background: white;
   transition: top 0.1s ease;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+  }
   #header{
     width: 60%;
     display: flex;
@@ -15,10 +17,6 @@ header {
     margin: 0 20%;
     background: white;
     box-sizing: border-box;
-    @media screen and (max-device-width: 400px) {
-      width: 100%;
-      margin: 0;
-    }
 
     #menu {
       display: flex;
@@ -63,7 +61,7 @@ header {
       display: flex;
       justify-content: right;
       align-items: center;
-      @media screen and (max-device-width: 400px) {
+      @media screen and (max-device-width: 500px) {
         padding: 0 25px 0 0;
       }
 

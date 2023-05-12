@@ -5,9 +5,9 @@
   top: 98px;
   display: flex;
 }
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 500px) {
   .description {
-    width: 90%;
+    width: 100%;
     display: block;
   }
 }

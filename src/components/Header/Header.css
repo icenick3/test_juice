@@ -8,6 +8,11 @@ header {
   background: white;
   transition: top 0.1s ease;
 }
+@media screen and (max-device-width: 500px) {
+  header {
+    width: 100%;
+  }
+}
 header #header {
   width: 60%;
   display: flex;
@@ -15,12 +20,6 @@ header #header {
   margin: 0 20%;
   background: white;
   box-sizing: border-box;
-}
-@media screen and (max-device-width: 400px) {
-  header #header {
-    width: 100%;
-    margin: 0;
-  }
 }
 header #header #menu {
   display: flex;
@@ -68,7 +67,7 @@ header #header #ShoppingCart {
   justify-content: right;
   align-items: center;
 }
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 500px) {
   header #header #ShoppingCart {
     padding: 0 25px 0 0;
   }

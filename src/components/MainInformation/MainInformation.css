@@ -2,5 +2,10 @@
   width: 50%;
   margin: 0 0 0 auto;
 }
+@media screen and (max-device-width: 500px) {
+  #Information {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=MainInformation.css.map */

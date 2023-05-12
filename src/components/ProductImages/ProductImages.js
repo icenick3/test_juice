@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import './ProductImages.css'
 import img from "../../images/img.png"
 import img1 from "../../images/img_1.png"
@@ -18,7 +18,17 @@ const ProductImages = () => {
     const [width, setWidth] = useState(null)
     const difference = Math.abs(Math.trunc((coordinat - width) / width))
     const [photoBlock, setPhotoBlock] = useState(null)
-    // const [distance, setDistance] = useState(1)
+    const [widthDevice, setWidthDevice] = useState(0);
+
+    useLayoutEffect(() => {
+        function updateWidth() {
+            setWidthDevice(window.innerWidth);
+        }
+        window.addEventListener('resize', updateWidth);
+        updateWidth();
+        return () => window.removeEventListener('resize', updateWidth);
+    }, []);
+
 
     const refs = [
         useRef(),
@@ -32,23 +42,22 @@ const ProductImages = () => {
     useEffect(() => {
         const header = document.getElementById('ourPolicy')
         const header2 = document.querySelector('#header')
-        // console.log(header)
+
         const handleScroll = () => {
             const element1Rect = hedRef.current.getBoundingClientRect();
             const element2Rect = header.getBoundingClientRect();
             const element3Rect = header2.getBoundingClientRect();
             const distance = (element1Rect.bottom - element2Rect.top);
             const distance2 = element3Rect.bottom - element1Rect.top
-            console.log(distance2);
-            if (distance >  0 ) {
+            if (distance >  0 && widthDevice > 500) {
                 hedRef.current.style.position = "absolute"
                 hedRef.current.style.bottom = "0"
 
-            } else if(distance === -2){
+            } else if(distance === -2 && widthDevice > 500){
                 hedRef.current.style.position = "absolute"
                 hedRef.current.style.bottom = "0"
             }
-            if (distance2 < -39){
+            if (distance2 < -39 && widthDevice > 500){
                 hedRef.current.style.position = "fixed"
                 hedRef.current.style.bottom = "80px"
             }

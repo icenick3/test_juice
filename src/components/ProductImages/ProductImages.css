@@ -2,9 +2,9 @@
   position: fixed;
   width: 550px;
 }
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 500px) {
   #photoContainer {
-    position: relative;
+    position: static;
     width: 100%;
   }
 }
@@ -33,6 +33,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
+}
+@media screen and (max-device-width: 500px) {
+  #photoContainer #position #photos {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 #photoContainer #position #photos img {
   width: 19%;

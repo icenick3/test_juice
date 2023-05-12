@@ -11,7 +11,7 @@ import BotPopup from "../../components/botPopup/botPopup";
 
 const ProductPage = ({setColorForCart}) => {
     return (
-        <>
+        <div id="productPage">
             <BlackHeader/>
             <Header/>
             <div className="description">
@@ -26,7 +26,7 @@ const ProductPage = ({setColorForCart}) => {
                 <BlackFooter/>
             </div>
             <BotPopup setColorForCart={setColorForCart}/>
-        </>
+        </div>
     );
 };
 

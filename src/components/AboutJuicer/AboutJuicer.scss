@@ -1,9 +1,16 @@
 #aboutJuicer {
   margin: 20px 0 0 0;
   padding: 20px;
+  @media screen and (max-device-width: 500px) {
+    //padding: 0;
+  }
+
   img {
     display: block;
     margin: 20px auto 20px auto;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+    }
   }
   #title{
     font-size: 18px;

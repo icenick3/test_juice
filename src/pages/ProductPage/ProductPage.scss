@@ -5,8 +5,8 @@
   top: 98px;
   display: flex;
 
-  @media screen and (max-device-width: 400px) {
-    width: 90%;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
     display: block;
   }
 }
@@ -20,3 +20,4 @@
 #blackFooterContainer{
   margin-bottom: 100px;
 }
+
