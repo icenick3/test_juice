@@ -4,12 +4,12 @@ import Header from "../../components/Header/Header";
 import Cart from "../../components/Cart/Cart";
 import BlackFooter from "../../components/BlackFooter/BlackFooter";
 
-const CartPage = () => {
+const CartPage = ({color}) => {
     return (
         <div>
             <BlackHeader/>
             <Header/>
-            <Cart/>
+            <Cart color={color}/>
             <BlackFooter/>
         </div>
     );

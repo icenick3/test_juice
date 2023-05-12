@@ -1,6 +1,6 @@
 #cart {
   width: 60%;
-  margin: 200px auto 50px auto;
+  margin: 100px auto 150px auto;
 }
 #cart h1 {
   text-align: center;
@@ -25,6 +25,7 @@
   border-radius: 10px;
 }
 #cart #summaryCart #products div h4 {
+  font-size: 16px;
   margin: 50px 0 20px 0;
 }
 #cart #summaryCart #products #prices {

@@ -5,7 +5,7 @@ import eye from '../../images/eye.png'
 import bag from '../../logotypes/whiteBag.png'
 import {Link} from "react-router-dom";
 
-const PriceAndTitle = () => {
+const PriceAndTitle = ({setColorForCart}) => {
     const [visitor, setVisitors] = useState(43)
     const [color, setColor] = useState("White")
 
@@ -22,6 +22,7 @@ useEffect(()=> {
 },[visitor])
     const onChange = (e) => {
         setColor(e.target.value)
+        setColorForCart(e.target.value)
         if (e.target.value === "White"){
         }
 

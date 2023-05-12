@@ -29,7 +29,7 @@ const BlackFooter = () => {
                 <div id="TEFooter">
                     <h2>Stay in the Know!</h2>
                     <p>Subscribe to Our Newsletter</p>
-                    <input type="text"/>
+                    <input type="text" placeholder={"Your email"}/>
                     <button>Subscribe</button>
                 </div>
             </div>

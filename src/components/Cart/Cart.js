@@ -5,7 +5,7 @@ import whiteBag from "../../logotypes/whiteBag.png"
 
 
 
-const Cart = () => {
+const Cart = ({color}) => {
     return (
         <div id="cart">
             <h1>Your cart</h1>
@@ -14,7 +14,7 @@ const Cart = () => {
                     <img src={img} alt=""/>
                     <div>
                         <h4>JuiceGenie - Portable Electric Blender</h4>
-                        <p>White</p>
+                        <p>{color}</p>
                     </div>
                     <div id="prices">
                         <p className="discount">$64.99</p>

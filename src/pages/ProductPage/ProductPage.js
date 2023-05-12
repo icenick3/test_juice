@@ -7,21 +7,25 @@ import './ProductPage.css'
 import PreFooter from "../../components/PreFooter/PreFooter";
 import BlackFooter from "../../components/BlackFooter/BlackFooter";
 import OurPolicy from "../../components/OurPolicy/OurPolicy";
+import BotPopup from "../../components/botPopup/botPopup";
 
-const ProductPage = () => {
+const ProductPage = ({setColorForCart}) => {
     return (
         <>
             <BlackHeader/>
             <Header/>
             <div className="description">
                 <ProductImages/>
-                <MainInformation/>
+                <MainInformation setColorForCart={setColorForCart}/>
             </div>
             <OurPolicy/>
             <div id="preFooterBlock">
                 <PreFooter/>
             </div>
-            <BlackFooter/>
+            <div id="blackFooterContainer">
+                <BlackFooter/>
+            </div>
+            <BotPopup setColorForCart={setColorForCart}/>
         </>
     );
 };
