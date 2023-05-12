@@ -1,7 +1,7 @@
 #delivery {
   width: 100%;
   padding: 0 20px 0 20px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 #delivery #deliveryDate {
   font-size: 28px;
@@ -43,11 +43,11 @@
   width: 33.33%;
 }
 #delivery .Details {
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
   text-align: left;
   background: #faf8ff;
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   display: flex;
 }
@@ -57,7 +57,9 @@
   margin: 0 10px 0 auto;
 }
 #delivery .Details #plusForRating {
-  margin: 0 10px 0 10px;
+  margin: 8px 10px 0 10px;
+  width: 10px;
+  height: 10px;
 }
 #delivery .Details img {
   width: 20px;
@@ -68,7 +70,9 @@
 }
 #delivery .Details #plus {
   display: block;
-  margin: 0 10px 0 auto;
+  margin: 8px 10px 0 auto;
+  width: 10px;
+  height: 10px;
 }
 #delivery .Details #plus:hover {
   cursor: pointer;

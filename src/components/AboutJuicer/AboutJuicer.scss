@@ -1,10 +1,35 @@
 #aboutJuicer {
-  margin: 20px;
+  margin: 20px 0 0 0;
+  padding: 20px;
   img {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 20px auto;
+  }
+  #title{
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+  }
+  p{
+    font-size: 16px;
   }
   .img {
     width: 100%;
   }
+  #jucier{
+    margin: 60px auto 30px auto;
+  }
+.secTitle{
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  ul{
+    font-size: 16px;
+    padding:0 20px 0 20px;
+    li{
+      margin: 10px 0;
+    }
+  }
+
 }

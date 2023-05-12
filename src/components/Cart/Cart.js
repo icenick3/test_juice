@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.css'
 import img from "../../images/img.png"
 import whiteBag from "../../logotypes/whiteBag.png"
-import PreFooter from "../PreFooter/PreFooter";
+
 
 
 const Cart = () => {
@@ -40,7 +40,6 @@ const Cart = () => {
                     </a>
                 </div>
             </div>
-            <PreFooter/>
         </div>
     );
 };

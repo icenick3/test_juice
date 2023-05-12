@@ -9,7 +9,7 @@ const AboutJuicer = () => {
     return (
         <div id="aboutJuicer">
             <img src={img} alt=""/>
-            <h2>
+            <h2 id="title">
                 Introducing the JuiceGenie - Portable Electric Juicer, the ultimate Juicer for a busy lifestyle! Say
                 goodbye to long lines at juice bars and hello to fresh, nutritious, and delicious juices anytime,
                 anywhere.
@@ -26,8 +26,8 @@ const AboutJuicer = () => {
                 the ability to make fresh juice anywhere you go, without the need for bulky equipment or appliances. The
                 JuiceGenie is the answer to your problems!
             </p>
-            <img className="img" src={img2} alt=""/>
-            <h2>
+            <img id="jucier" className="img" src={img2} alt=""/>
+            <h2 className="secTitle">
                 Reasons why the JuiceGenie will change your life:
             </h2>
             <ul>
@@ -64,7 +64,7 @@ const AboutJuicer = () => {
                 So what are you waiting for? Say goodbye to long lines and expensive juice bars, and hello to the
                 JuiceGenie!
             </p>
-            <h2>
+            <h2 className="secTitle">
                 Product Specifications:
             </h2>
             <ul>
@@ -80,9 +80,9 @@ const AboutJuicer = () => {
                 <li>
                     Working Time: 10-12 cups of juice per full charge
                 </li>
-                <h2>
-                    Package Inclusions:
-                </h2>
+            </ul>
+            <h2 className="secTitle">Package Inclusions:</h2>
+            <ul>
                 <li>
                     1 x JuiceGenie Portable Electric Juicer
                 </li>
@@ -100,7 +100,7 @@ const AboutJuicer = () => {
                 <br/>
                 Our customer support team is available 24/7 to answer any questions or concerns you may have.
             </p>
-            <h2>
+            <h2 className="secTitle">
                 "I've been using the JuiceGenie for a month now, and I can't imagine my life without it. It's perfect
                 for busy mornings or when I'm on-the-go." - Michael T.
             </h2>

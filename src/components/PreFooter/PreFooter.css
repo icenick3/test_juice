@@ -1,7 +1,7 @@
 #preFooter {
-  margin: 100px 0 0 0;
-  border-top: #1e1e1e 2px solid;
   padding: 50px 0 0 0;
+  width: 60%;
+  margin: 0 auto;
 }
 #preFooter #mainPreFooter {
   width: 100%;

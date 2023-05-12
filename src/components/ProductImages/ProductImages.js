@@ -30,7 +30,7 @@ const ProductImages = () => {
     const hedRef = useRef();
 
     useEffect(() => {
-        const header = document.getElementById('preFooter')
+        const header = document.getElementById('ourPolicy')
         const header2 = document.querySelector('#header')
         // console.log(header)
         const handleScroll = () => {

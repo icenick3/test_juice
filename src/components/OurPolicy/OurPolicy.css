@@ -1,3 +1,83 @@
-
+#ourPolicy {
+  width: 100%;
+  margin: 160px 0 0 0;
+}
+#ourPolicy #img {
+  width: 100%;
+  background: #faf8ff;
+  margin: 0 0 80px 0;
+}
+#ourPolicy #img img {
+  width: 50%;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+#ourPolicy .premiumProducts {
+  width: 60%;
+  display: flex;
+  margin: 60px auto;
+}
+#ourPolicy .premiumProducts img {
+  width: 545px;
+  display: block;
+  border-radius: 10px;
+}
+#ourPolicy .premiumProducts .text {
+  padding: 60px 40px;
+  text-align: center;
+}
+#ourPolicy .premiumProducts .text h1 {
+  font-size: 24px;
+}
+#ourPolicy .premiumProducts .text p {
+  font-size: 16px;
+}
+#ourPolicy .articles {
+  width: 100%;
+  margin: 100px 0 0 0;
+}
+#ourPolicy .articles #articleMain {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+#ourPolicy .articles #articleMain div {
+  width: 33.33%;
+  line-height: 2;
+}
+#ourPolicy .articles #articleMain div img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+#ourPolicy .articles #articleMain div p {
+  width: 30%;
+  display: block;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+#ourPolicy #bill {
+  width: 100%;
+  background: #faf8ff;
+  margin: 100px 0 0 0;
+}
+#ourPolicy #bill div {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+}
+#ourPolicy #bill div h2 {
+  font-size: 24px;
+}
+#ourPolicy #bill div h4 {
+  font-size: 18px;
+}
 
 /*# sourceMappingURL=OurPolicy.css.map */

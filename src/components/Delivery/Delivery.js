@@ -11,7 +11,7 @@ import blackReturn from '../../logotypes/blackReturn.png'
 import redReturn from '../../logotypes/redReturn.png'
 import blackReviews from '../../logotypes/blackReviews.png'
 import redReviews from '../../logotypes/redReviews.png'
-import rating from '../../images/raiting.png'
+import rating from '../../images/starsPurple.png'
 
 const Delivery = () => {
     const [activeShipping, setActiveShipping] = useState(false)
