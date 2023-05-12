@@ -18,6 +18,7 @@ const ProductImages = () => {
     const [width, setWidth] = useState(null)
     const difference = Math.abs(Math.trunc((coordinat - width) / width))
     const [photoBlock, setPhotoBlock] = useState(null)
+    // const [distance, setDistance] = useState(1)
 
     const refs = [
         useRef(),
@@ -26,26 +27,72 @@ const ProductImages = () => {
         useRef(),
         useRef()
     ]
+    const hedRef = useRef();
+
+    useEffect(() => {
+        const header = document.getElementById('preFooter')
+        const header2 = document.querySelector('#header')
+        // console.log(header)
+        const handleScroll = () => {
+            const element1Rect = hedRef.current.getBoundingClientRect();
+            const element2Rect = header.getBoundingClientRect();
+            const element3Rect = header2.getBoundingClientRect();
+            const distance = (element1Rect.bottom - element2Rect.top);
+            const distance2 = element3Rect.bottom - element1Rect.top
+            console.log(distance2);
+            if (distance >  0 ) {
+                hedRef.current.style.position = "absolute"
+                hedRef.current.style.bottom = "0"
+
+            } else if(distance === -2){
+                hedRef.current.style.position = "absolute"
+                hedRef.current.style.bottom = "0"
+            }
+            if (distance2 < -39){
+                hedRef.current.style.position = "fixed"
+                hedRef.current.style.bottom = "80px"
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+
+    }, [window.scrollY]);
+
+
 
     useEffect(() => {
         photoRef.current.style.left = `${coordinat}px`
         const parent = document.getElementById('photoBlock');
         setPhotoBlock(parent)
         setWidth(parent.clientWidth)
-        if (coordinat === 0){
-            refs.map(ref => {ref.current.classList.remove('visible')})
+        if (coordinat === 0) {
+            refs.map(ref => {
+                ref.current.classList.remove('visible')
+            })
             refs[0].current.classList.add('visible')
-        } else  if (coordinat === -width){
-            refs.map(ref => {ref.current.classList.remove('visible')})
+        } else if (coordinat === -width) {
+            refs.map(ref => {
+                ref.current.classList.remove('visible')
+            })
             refs[1].current.classList.add('visible')
-        } else  if (coordinat === -2*width){
-            refs.map(ref => {ref.current.classList.remove('visible')})
+        } else if (coordinat === -2 * width) {
+            refs.map(ref => {
+                ref.current.classList.remove('visible')
+            })
             refs[2].current.classList.add('visible')
-        } else  if (coordinat === -3*width){
-            refs.map(ref => {ref.current.classList.remove('visible')})
+        } else if (coordinat === -3 * width) {
+            refs.map(ref => {
+                ref.current.classList.remove('visible')
+            })
             refs[3].current.classList.add('visible')
-        } else  if (coordinat === -4*width){
-            refs.map(ref => {ref.current.classList.remove('visible')})
+        } else if (coordinat === -4 * width) {
+            refs.map(ref => {
+                ref.current.classList.remove('visible')
+            })
             refs[4].current.classList.add('visible')
         }
 
@@ -146,23 +193,26 @@ const ProductImages = () => {
     }
 
     return (
-        <div id="photoContainer">
-            <div id="mainPhotoContainer" onMouseMove={onMouseMove} onMouseDown={onMouseDOwn} onMouseLeave={onMouseLeave}
-                 onMouseUp={onMouseLeave}>
-                <div ref={photoRef} id="photoBlock">
-                    <img className="mainPhoto " src={img} alt=""/>
-                    <img className="mainPhoto " src={img1} alt=""/>
-                    <img className="mainPhoto " src={img2} alt=""/>
-                    <img className="mainPhoto " src={img3} alt=""/>
-                    <img className="mainPhoto " src={img4} alt=""/>
+        <div ref={hedRef} id="photoContainer">
+            <div id="position">
+                <div id="mainPhotoContainer" onMouseMove={onMouseMove} onMouseDown={onMouseDOwn}
+                     onMouseLeave={onMouseLeave}
+                     onMouseUp={onMouseLeave}>
+                    <div ref={photoRef} id="photoBlock">
+                        <img className="mainPhoto " src={img} alt=""/>
+                        <img className="mainPhoto " src={img1} alt=""/>
+                        <img className="mainPhoto " src={img2} alt=""/>
+                        <img className="mainPhoto " src={img3} alt=""/>
+                        <img className="mainPhoto " src={img4} alt=""/>
+                    </div>
                 </div>
-            </div>
-            <div id="photos">
-                <img ref={refs[0]} src={img} className="noVisible" alt="" onClick={onclick}/>
-                <img ref={refs[1]} src={img1} className="noVisible" alt="" onClick={onclick}/>
-                <img ref={refs[2]} src={img2} className="noVisible" alt="" onClick={onclick}/>
-                <img ref={refs[3]} src={img3} className="noVisible" alt="" onClick={onclick}/>
-                <img ref={refs[4]} src={img4} className="noVisible" alt="" onClick={onclick}/>
+                <div id="photos">
+                    <img ref={refs[0]} src={img} className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[1]} src={img1} className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[2]} src={img2} className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[3]} src={img3} className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[4]} src={img4} className="noVisible" alt="" onClick={onclick}/>
+                </div>
             </div>
         </div>
     );

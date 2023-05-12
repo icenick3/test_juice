@@ -34,10 +34,10 @@ const Cart = () => {
                         <p>$85.01</p>
                     </div>
                     <h6>Taxes and <span>shipping</span> calculated at checkout</h6>
-                    <button id="offer">
+                    <a id="offer" href="{offer}">
                         <img src={whiteBag} alt=""/>
                         Check Out - $64.99
-                    </button>
+                    </a>
                 </div>
             </div>
             <PreFooter/>

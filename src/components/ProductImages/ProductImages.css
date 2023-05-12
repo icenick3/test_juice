@@ -1,40 +1,45 @@
 #photoContainer {
-  width: 50%;
+  position: fixed;
+  width: 550px;
 }
 @media screen and (max-device-width: 400px) {
   #photoContainer {
+    position: relative;
     width: 100%;
   }
 }
-#photoContainer #mainPhotoContainer {
+#photoContainer #position {
+  width: 100%;
+}
+#photoContainer #position #mainPhotoContainer {
   width: 100%;
   overflow-x: hidden;
 }
-#photoContainer #mainPhotoContainer #photoBlock {
+#photoContainer #position #mainPhotoContainer #photoBlock {
   width: content-box;
   display: flex;
   position: relative;
   left: 0;
 }
-#photoContainer #mainPhotoContainer #photoBlock:hover {
+#photoContainer #position #mainPhotoContainer #photoBlock:hover {
   cursor: grab;
 }
-#photoContainer #mainPhotoContainer #photoBlock .mainPhoto {
+#photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
   width: 100%;
   border-radius: 20px;
   padding: 1%;
 }
-#photoContainer #photos {
+#photoContainer #position #photos {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-#photoContainer #photos img {
+#photoContainer #position #photos img {
   width: 19%;
   border-radius: 10px;
   margin: 10px 4px;
 }
-#photoContainer #photos img:hover {
+#photoContainer #position #photos img:hover {
   cursor: pointer;
 }
 

@@ -1,18 +1,28 @@
 header {
+  width: 100%;
+  position: fixed;
+  top: 38px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: white;
+  transition: top 0.1s ease;
+}
+header #header {
   width: 60%;
   display: flex;
+  padding: 20px;
   margin: 0 20%;
-  height: 60px;
   background: white;
   box-sizing: border-box;
 }
 @media screen and (max-device-width: 400px) {
-  header {
+  header #header {
     width: 100%;
     margin: 0;
   }
 }
-header #menu {
+header #header #menu {
   display: flex;
   width: 25%;
   padding: 10px;
@@ -21,36 +31,36 @@ header #menu {
   align-items: center;
 }
 @media screen and (max-device-width: 400px) {
-  header #menu {
+  header #header #menu {
     padding: 0 0 0 25px;
   }
 }
-header #menu img {
+header #header #menu img {
   justify-content: center;
   width: 25px;
   height: 25px;
 }
-header #logoShop {
+header #header #logoShop {
   width: 50%;
   margin: 0 auto;
   padding: 10px;
 }
 @media screen and (max-device-width: 400px) {
-  header #logoShop {
+  header #header #logoShop {
     padding: 0 0 0 0;
   }
 }
-header #logoShop h1 {
+header #header #logoShop h1 {
   text-align: center;
   font-family: Arial;
 }
 @media screen and (max-device-width: 400px) {
-  header #logoShop h1 {
+  header #header #logoShop h1 {
     font-size: 20px;
     padding: 20px 0 20px 0;
   }
 }
-header #ShoppingCart {
+header #header #ShoppingCart {
   position: relative;
   width: 25%;
   padding: 10px;
@@ -60,11 +70,11 @@ header #ShoppingCart {
   align-items: center;
 }
 @media screen and (max-device-width: 400px) {
-  header #ShoppingCart {
+  header #header #ShoppingCart {
     padding: 0 25px 0 0;
   }
 }
-header #ShoppingCart img {
+header #header #ShoppingCart img {
   width: 25px;
   height: 25px;
 }

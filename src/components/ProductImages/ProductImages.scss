@@ -1,41 +1,49 @@
 #photoContainer {
-  width: 50%;
+  //width: 50%;
+  //position: absolute;
+  //bottom: 0;
+  position: fixed;
+  width: 550px;
   @media screen and (max-device-width: 400px) {
+    position: relative;
     width: 100%;
-
   }
-  #mainPhotoContainer{
+  #position {
     width: 100%;
-    overflow-x: hidden;
-    #photoBlock {
-      width: content-box;
+    #mainPhotoContainer{
+      width: 100%;
+      overflow-x: hidden;
+      #photoBlock {
+        width: content-box;
+        display: flex;
+        position: relative;
+        left: 0;
+        &:hover {
+          cursor: grab;
+        }
+        .mainPhoto {
+          width: 100%;
+          border-radius: 20px;
+          padding: 1%;
+
+        }
+      }
+    }
+    #photos{
       display: flex;
-      position: relative;
-      left: 0;
-      &:hover {
-        cursor: grab;
+      width: 100%;
+      justify-content: center;
+      img {
+        width: 19%;
+        border-radius: 10px;
+        margin: 10px 4px;
+        &:hover {
+          cursor: pointer;
+        }
       }
-      .mainPhoto {
-        width: 100%;
-        border-radius: 20px;
-        padding: 1%;
+    }
+  }
 
-      }
-    }
-  }
-  #photos{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    img {
-      width: 19%;
-      border-radius: 10px;
-      margin: 10px 4px;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
 }
 
 .noVisible {

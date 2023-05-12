@@ -6,6 +6,7 @@ import MainInformation from "../../components/MainInformation/MainInformation";
 import './ProductPage.css'
 import PreFooter from "../../components/PreFooter/PreFooter";
 import BlackFooter from "../../components/BlackFooter/BlackFooter";
+import OurPolicy from "../../components/OurPolicy/OurPolicy";
 
 const ProductPage = () => {
     return (
@@ -16,6 +17,7 @@ const ProductPage = () => {
                 <ProductImages/>
                 <MainInformation/>
             </div>
+            <OurPolicy/>
             <div id="preFooterBlock">
                 <PreFooter/>
             </div>

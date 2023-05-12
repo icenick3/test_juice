@@ -82,7 +82,8 @@
   color: #d22e2e;
   text-decoration: underline;
 }
-#cart #summaryCart button {
+#cart #summaryCart #offer {
+  text-align: center;
   width: 90%;
   display: block;
   border-radius: 8px;
@@ -94,11 +95,11 @@
   margin: 0 auto 20px auto;
   font-size: 18px;
 }
-#cart #summaryCart button:hover {
+#cart #summaryCart #offer:hover {
   cursor: pointer;
   outline: 2px solid #1e1e1e;
 }
-#cart #summaryCart button img {
+#cart #summaryCart #offer img {
   width: 15px;
   height: 15px;
   margin: 0 5px;
