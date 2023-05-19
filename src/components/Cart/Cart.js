@@ -14,7 +14,7 @@ const Cart = ({color}) => {
                     <img src={img} alt=""/>
                     <div>
                         <h4>JuiceGenie - Portable Electric Blender</h4>
-                        <p>{color}</p>
+                        <p id="color">{color}</p>
                     </div>
                     <div id="prices">
                         <p className="discount">$64.99</p>

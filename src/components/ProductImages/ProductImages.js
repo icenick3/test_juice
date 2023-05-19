@@ -1,10 +1,7 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import './ProductImages.css'
-import img from "../../images/img.png"
-import img1 from "../../images/img_1.png"
-import img2 from '../../images/img_2.png'
-import img3 from '../../images/img_3.png'
-import img4 from '../../images/img_4.png'
+
+
 
 
 const ProductImages = () => {
@@ -38,40 +35,6 @@ const ProductImages = () => {
         useRef()
     ]
     const hedRef = useRef();
-
-    useEffect(() => {
-        const header = document.getElementById('ourPolicy')
-        const header2 = document.querySelector('#header')
-
-        const handleScroll = () => {
-            const element1Rect = hedRef.current.getBoundingClientRect();
-            const element2Rect = header.getBoundingClientRect();
-            const element3Rect = header2.getBoundingClientRect();
-            const distance = (element1Rect.bottom - element2Rect.top);
-            const distance2 = element3Rect.bottom - element1Rect.top
-            if (distance >  0 && widthDevice > 500) {
-                hedRef.current.style.position = "absolute"
-                hedRef.current.style.bottom = "0"
-
-            } else if(distance === -2 && widthDevice > 500){
-                hedRef.current.style.position = "absolute"
-                hedRef.current.style.bottom = "0"
-            }
-            if (distance2 < -39 && widthDevice > 500){
-                hedRef.current.style.position = "fixed"
-                hedRef.current.style.bottom = "80px"
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-
-    }, [window.scrollY]);
-
-
 
     useEffect(() => {
         photoRef.current.style.left = `${coordinat}px`
@@ -208,19 +171,19 @@ const ProductImages = () => {
                      onMouseLeave={onMouseLeave}
                      onMouseUp={onMouseLeave}>
                     <div ref={photoRef} id="photoBlock">
-                        <img className="mainPhoto " src={img} alt=""/>
-                        <img className="mainPhoto " src={img1} alt=""/>
-                        <img className="mainPhoto " src={img2} alt=""/>
-                        <img className="mainPhoto " src={img3} alt=""/>
-                        <img className="mainPhoto " src={img4} alt=""/>
+                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img.jpg" alt=""/>
+                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img2.jpg" alt=""/>
+                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img3.jpg" alt=""/>
+                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img4.jpg" alt=""/>
+                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img5.jpg" alt=""/>
                     </div>
                 </div>
                 <div id="photos">
-                    <img ref={refs[0]} src={img} className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[1]} src={img1} className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[2]} src={img2} className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[3]} src={img3} className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[4]} src={img4} className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[0]} src="https://loveriq.online/sweep/za1/img.jpg" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[1]} src="https://loveriq.online/sweep/za1/img2.jpg" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[2]} src="https://loveriq.online/sweep/za1/img3.jpg" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[3]} src="https://loveriq.online/sweep/za1/img4.jpg" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[4]} src="https://loveriq.online/sweep/za1/img5.jpg" className="noVisible" alt="" onClick={onclick}/>
                 </div>
             </div>
         </div>

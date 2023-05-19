@@ -2,14 +2,31 @@
   width: 60%;
   margin: 100px auto 150px auto;
 }
+@media screen and (max-device-width: 500px) {
+  #cart {
+    width: 100%;
+    padding: 20px;
+    margin: 50px auto 20px auto;
+  }
+}
 #cart h1 {
   text-align: center;
   font-weight: bold;
   font-size: 60px;
 }
+@media screen and (max-device-width: 500px) {
+  #cart h1 {
+    font-size: 30px;
+  }
+}
 #cart #summaryCart {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart {
+    display: block;
+  }
 }
 #cart #summaryCart #products {
   margin: 30px 0;
@@ -18,15 +35,40 @@
   display: flex;
   border-radius: 10px;
 }
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #products {
+    width: 100%;
+    position: relative;
+  }
+}
 #cart #summaryCart #products img {
   width: 150px;
   height: 150px;
   margin: 20px;
   border-radius: 10px;
 }
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #products img {
+    width: 100px;
+    height: 100px;
+  }
+}
 #cart #summaryCart #products div h4 {
   font-size: 16px;
   margin: 50px 0 20px 0;
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #products div h4 {
+    margin: 10px;
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #products div #color {
+    margin: 10px;
+    display: block;
+  }
 }
 #cart #summaryCart #products #prices {
   margin: 100px 20px 0 0;
@@ -34,11 +76,25 @@
   font-size: 20px;
   font-weight: bold;
 }
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #products #prices {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+}
 #cart #summaryCart #totalPrice {
   width: 45%;
   background: #faf8ff;
   margin: 30px 0;
   border-radius: 10px;
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #totalPrice {
+    width: 100%;
+    padding-bottom: 10px;
+  }
 }
 #cart #summaryCart #totalPrice #subtotal {
   display: flex;
@@ -47,6 +103,11 @@
 #cart #summaryCart #totalPrice #subtotal h4 {
   margin: 20px 0 0 20px;
   font-size: 25px;
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #totalPrice #subtotal h4 {
+    font-size: 19px;
+  }
 }
 #cart #summaryCart #totalPrice #subtotal #pricesInTotal {
   font-weight: 600;
@@ -68,11 +129,21 @@
   font-size: 25px;
   color: #d22e2e;
 }
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #totalSaving h4 {
+    font-size: 16px;
+  }
+}
 #cart #summaryCart #totalSaving p {
   font-size: 25px;
   color: #d22e2e;
   font-weight: 600;
   margin: 0 20px 0 0;
+}
+@media screen and (max-device-width: 500px) {
+  #cart #summaryCart #totalSaving p {
+    font-size: 16px;
+  }
 }
 #cart #summaryCart h6 {
   text-align: center;
@@ -93,6 +164,7 @@
   color: white;
   padding: 10px;
   background: black;
+  text-decoration: none;
   margin: 0 auto 20px auto;
   font-size: 18px;
 }
@@ -109,10 +181,22 @@
 .discount {
   color: #d22e2e;
 }
+@media screen and (max-device-width: 500px) {
+  .discount {
+    margin: 0 10px 0 0;
+    font-size: 16px;
+  }
+}
 
 .realPrice {
   color: #a7a7a7;
   text-decoration: line-through;
+}
+@media screen and (max-device-width: 500px) {
+  .realPrice {
+    margin: 0 10px 30px 0;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=Cart.css.map */

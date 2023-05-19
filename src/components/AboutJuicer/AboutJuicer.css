@@ -1,10 +1,19 @@
 #aboutJuicer {
-  margin: 20px 0 0 0;
   padding: 20px;
+  width: 60%;
+  margin: 90px auto;
+}
+@media screen and (max-device-width: 500px) {
+  #aboutJuicer {
+    width: 100%;
+    padding: 10px;
+  }
 }
 #aboutJuicer img {
   display: block;
   margin: 20px auto 20px auto;
+  width: 50%;
+  border-radius: 20px;
 }
 @media screen and (max-device-width: 500px) {
   #aboutJuicer img {
@@ -20,10 +29,20 @@
   font-size: 16px;
 }
 #aboutJuicer .img {
-  width: 100%;
+  width: 40%;
+}
+@media screen and (max-device-width: 500px) {
+  #aboutJuicer .img {
+    width: 100%;
+  }
 }
 #aboutJuicer #jucier {
-  margin: 60px auto 30px auto;
+  width: 40%;
+}
+@media screen and (max-device-width: 500px) {
+  #aboutJuicer #jucier {
+    width: 100%;
+  }
 }
 #aboutJuicer .secTitle {
   font-size: 16px;
@@ -35,6 +54,49 @@
 }
 #aboutJuicer ul li {
   margin: 10px 0;
+}
+#aboutJuicer #tell {
+  font-size: 18px;
+  margin: 20px 0;
+  text-rendering: optimizeLegibility;
+  color: #050505;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: initial;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.textImage {
+  display: flex;
+}
+@media screen and (max-device-width: 500px) {
+  .textImage {
+    display: block;
+  }
+}
+
+.textXXX {
+  padding: 30px;
+  width: 50%;
+}
+@media screen and (max-device-width: 500px) {
+  .textXXX {
+    width: 100%;
+  }
+}
+
+#imgGif {
+  display: block;
+  width: 30%;
+  border-radius: 30px;
+  height: 600px;
+  margin-top: 130px;
+}
+@media screen and (max-device-width: 500px) {
+  #imgGif {
+    height: 400px;
+  }
 }
 
 /*# sourceMappingURL=AboutJuicer.css.map */

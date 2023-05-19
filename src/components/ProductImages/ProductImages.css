@@ -1,22 +1,23 @@
 #photoContainer {
-  position: fixed;
-  width: 550px;
+  position: static;
+  width: 100%;
+  margin: 30px auto;
 }
 @media screen and (max-device-width: 500px) {
   #photoContainer {
-    position: static;
-    width: 100%;
+    margin: 0;
   }
 }
 #photoContainer #position {
   width: 100%;
 }
 #photoContainer #position #mainPhotoContainer {
-  width: 100%;
+  width: 95%;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 #photoContainer #position #mainPhotoContainer #photoBlock {
-  width: content-box;
+  width: 100%;
   display: flex;
   position: relative;
   left: 0;
@@ -26,13 +27,15 @@
 }
 #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
   width: 100%;
-  border-radius: 20px;
-  padding: 1%;
+  padding: 20px;
+  border-radius: 50px;
 }
 #photoContainer #position #photos {
   display: flex;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   justify-content: center;
+  padding: 0 20px;
 }
 @media screen and (max-device-width: 500px) {
   #photoContainer #position #photos {

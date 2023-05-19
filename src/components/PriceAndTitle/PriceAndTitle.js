@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import reit from "../../images/raiting.png"
 import './PriceAndTitle.css'
-import eye from '../../images/eye.png'
-import bag from '../../logotypes/whiteBag.png'
-import {Link} from "react-router-dom";
 
-const PriceAndTitle = ({setColorForCart}) => {
+
+const PriceAndTitle = () => {
     const [visitor, setVisitors] = useState(43)
     const [color, setColor] = useState("White")
 
@@ -22,7 +19,6 @@ useEffect(()=> {
 },[visitor])
     const onChange = (e) => {
         setColor(e.target.value)
-        setColorForCart(e.target.value)
         if (e.target.value === "White"){
         }
 
@@ -30,7 +26,7 @@ useEffect(()=> {
     return (
         <div id="PriceInfo">
             <h1>JuiceGenie - Portable Electric Blender</h1>
-            <div id="stars"><img id="rait" src={reit} alt=""/>(35)</div>
+            <div id="stars"><img id="rait" src="https://loveriq.online/sweep/za1/raiting.png" alt=""/>(35)</div>
             <p><span id="discount">$64.99</span><span id="price">$150.00</span></p>
             <h3>Colour: {color}</h3>
             <select name="select" id="select" onChange={onChange}>
@@ -38,13 +34,13 @@ useEffect(()=> {
                 <option value="Pink">Pink</option>
             </select>
             <div id="visitors">
-                <img id="eye" src={eye} alt=""/>
+                <img id="eye" src="https://loveriq.online/sweep/za1/eye.png" alt=""/>
                 <p>{visitor} visitor(s) currently looking at this product</p>
             </div>
-            <Link id="buttonAddToCart" to="/cart">
-                <img id="whiteBag" src={bag} alt=""/>
-                 Add to cart
-            </Link>
+            <a id="buttonAddToCart" href="{offer_link}">
+                <img id="whiteBag" src="https://loveriq.online/sweep/za1/whiteBag.png" alt=""/>
+                Add to cart
+            </a>
         </div>
     );
 };

@@ -14,3 +14,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
     background-color: #f5f5f5;
 }
+
+.App {
+    @media screen and (max-device-width: 500px) {
+       overflow-x: hidden;
+    }
+}

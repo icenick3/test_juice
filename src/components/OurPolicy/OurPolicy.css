@@ -7,6 +7,11 @@
     display: none;
   }
 }
+@media screen and (max-device-width: 1800px) and (min-device-width: 500px) {
+  #ourPolicy {
+    display: none;
+  }
+}
 #ourPolicy #img {
   width: 100%;
   background: #faf8ff;

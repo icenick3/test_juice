@@ -24,13 +24,25 @@
 }
 #PriceInfo select {
   width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
   padding: 10px;
   border-radius: 10px;
   background: #f2ecff;
   border: none;
+  color: inherit;
+  caret-color: inherit;
   box-sizing: border-box;
   outline: none;
   transition: outline 0.1s ease-in-out;
+}
+@media screen and (max-device-width: 500px) {
+  #PriceInfo select {
+    padding: 15px;
+  }
 }
 #PriceInfo select:hover {
   outline: 4px solid mediumpurple;

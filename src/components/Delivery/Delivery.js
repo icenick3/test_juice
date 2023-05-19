@@ -1,17 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Delivery.css'
-import start from '../../logotypes/calendar.png'
-import middle from '../../logotypes/deliver.png'
-import finish from '../../logotypes/courier.png'
-import blackCar from '../../logotypes/blackCar.png'
-import redCar from '../../logotypes/redCar.png'
-import plus from '../../logotypes/plus.png'
-import minus from '../../logotypes/minus.png'
-import blackReturn from '../../logotypes/blackReturn.png'
-import redReturn from '../../logotypes/redReturn.png'
-import blackReviews from '../../logotypes/blackReviews.png'
-import redReviews from '../../logotypes/redReviews.png'
-import rating from '../../images/starsPurple.png'
 
 const Delivery = () => {
     const [activeShipping, setActiveShipping] = useState(false)
@@ -41,12 +29,12 @@ const Delivery = () => {
 
     const shippingInfo = (e) => {
         if (activePlus) {
-            plusRef.current.src = `${minus}`
-            carRef.current.src = `${redCar}`
+            plusRef.current.src = "https://loveriq.online/sweep/za1/minus.png"
+            carRef.current.src = "https://loveriq.online/sweep/za1/redCar.png"
             setActivePlus(false)
         } else {
-            plusRef.current.src = `${plus}`
-            carRef.current.src = `${blackCar}`
+            plusRef.current.src = "https://loveriq.online/sweep/za1/plus.png"
+            carRef.current.src = "https://loveriq.online/sweep/za1/blackCar.png"
             setActivePlus(true)
         }
         if (activeShipping === false) {
@@ -60,12 +48,12 @@ const Delivery = () => {
 
     const returnsInfo = () => {
         if (activePlusReturns) {
-            plusRefReturn.current.src = `${minus}`
-            returnRef.current.src = `${redReturn}`
+            plusRefReturn.current.src = "https://loveriq.online/sweep/za1/minus.png"
+            returnRef.current.src = "https://loveriq.online/sweep/za1/redReturn.png"
             setActivePlusReturns(false)
         } else {
-            plusRefReturn.current.src = `${plus}`
-            returnRef.current.src = `${blackReturn}`
+            plusRefReturn.current.src = "https://loveriq.online/sweep/za1/plus.png"
+            returnRef.current.src = "https://loveriq.online/sweep/za1/blackReturn.png"
             setActivePlusReturns(true)
         }
         if (activeReturns === false) {
@@ -76,24 +64,31 @@ const Delivery = () => {
             setActiveReturns(false)
         }
     }
+    const scrollToComments = () => {
+        const commentsElement = document.getElementById('comments');
+        if (commentsElement) {
+            commentsElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div id="delivery">
             <p id="deliveryDate">{formattedDeliveryDate}.<span> Estimated arrival</span></p>
             <div id="deliverySchema">
                 <div id="startDelivery">
-                    <img className="devLogo" src={start} alt=""/>
+                    <img className="devLogo" src="https://loveriq.online/sweep/za1/calendar.png" alt=""/>
                 </div>
                 <div className="line">
                     <div className="fg"></div>
                 </div>
                 <div id="middleDelivery">
-                    <img className="devLogo" src={middle} alt=""/>
+                    <img className="devLogo" src="https://loveriq.online/sweep/za1/deliver.png" alt=""/>
                 </div>
                 <div className="line">
                     <div className="fg"></div>
                 </div>
                 <div id="finishDelivery">
-                    <img className="devLogo" src={finish} alt=""/>
+                    <img className="devLogo" src="https://loveriq.online/sweep/za1/courier.png" alt=""/>
                 </div>
             </div>
             <div id="deliveryInfo">
@@ -112,9 +107,9 @@ const Delivery = () => {
                 </div>
             </div>
             <div className="Details">
-                <img ref={carRef} src={blackCar} alt=""/>
+                <img ref={carRef} src="https://loveriq.online/sweep/za1/blackCar.png" alt=""/>
                 <h4>Shipping Information</h4>
-                <img ref={plusRef} id="plus" src={plus} alt="" onClick={shippingInfo}/>
+                <img ref={plusRef} id="plus" src="https://loveriq.online/sweep/za1/plus.png" alt="" onClick={shippingInfo}/>
             </div>
             <div ref={refs[0]} id="shippingDetails">
                 <br/>
@@ -136,9 +131,9 @@ const Delivery = () => {
                 <br/>
             </div>
             <div className="Details">
-                <img ref={returnRef} src={blackReturn} alt=""/>
+                <img ref={returnRef} src="https://loveriq.online/sweep/za1/blackReturn.png" alt=""/>
                 <h4>Returns</h4>
-                <img ref={plusRefReturn} id="plus" src={plus} alt="" onClick={returnsInfo}/>
+                <img ref={plusRefReturn} id="plus" src="https://loveriq.online/sweep/za1/plus.png" alt="" onClick={returnsInfo}/>
             </div>
             <div ref={refs[1]} id="returnsInfo">
                 <p>
@@ -155,11 +150,11 @@ const Delivery = () => {
                 </p>
             </div>
             <div className="Details">
-                <img src={blackReviews} alt=""/>
+                <img src="https://loveriq.online/sweep/za1/blackReviews.png" alt=""/>
                 <h4>Reviews</h4>
-                <img id="rating" src={rating} alt=""/>
+                <img id="rating" src="https://loveriq.online/sweep/za1/starsPurple.png" alt=""/>
                 <p>(35)</p>
-                <img id="plusForRating" src={plus} alt=""/>
+                <img id="plusForRating" src="https://loveriq.online/sweep/za1/plus.png" alt="" onClick={scrollToComments}/>
             </div>
         </div>
     );

@@ -4,6 +4,9 @@
   @media screen and (max-device-width: 500px) {
     display: none;
   }
+  @media screen and (max-device-width: 1800px) and (min-device-width: 500px) {
+    display: none;
+  }
 
   #img {
     width: 100%;

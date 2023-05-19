@@ -6,19 +6,36 @@
     width: 60%;
     margin: 0 auto;
     display: flex;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+      display: block;
+    }
     #FEFooter {
       width: 40%;
+      @media screen and (max-device-width: 500px) {
+        padding: 20px;
+        width: 100%;
+        border-bottom: 1px solid grey;
+      }
     }
     #SEFooter {
       width: 20%;
       margin: 0 30px;
       line-height: 2;
+      @media screen and (max-device-width: 500px) {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+      }
       li {
         list-style: none;
       }
     }
     #TEFooter{
       width: 40%;
+      @media screen and (max-device-width: 500px) {
+        display: none;
+      }
       h2 {
         margin: 0 0 10px 0;
       }

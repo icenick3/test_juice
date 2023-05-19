@@ -1,42 +1,98 @@
 #aboutJuicer {
-  margin: 20px 0 0 0;
   padding: 20px;
+  width: 60%;
+  margin: 90px auto;
   @media screen and (max-device-width: 500px) {
-    //padding: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  @media screen and (max-device-width: 1800px) and (min-device-width: 500px) {
+    
   }
 
   img {
     display: block;
     margin: 20px auto 20px auto;
+    width: 50%;
+    border-radius: 20px;
     @media screen and (max-device-width: 500px) {
       width: 100%;
     }
   }
-  #title{
+
+  #title {
     font-size: 18px;
     font-weight: 800;
     text-align: center;
   }
-  p{
+
+  p {
     font-size: 16px;
   }
+
   .img {
-    width: 100%;
+    width: 40%;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+    }
   }
-  #jucier{
-    margin: 60px auto 30px auto;
+
+  #jucier {
+    width: 40%;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+    }
   }
-.secTitle{
+
+  .secTitle {
     font-size: 16px;
     margin: 20px 0;
   }
 
-  ul{
+  ul {
     font-size: 16px;
-    padding:0 20px 0 20px;
-    li{
+    padding: 0 20px 0 20px;
+
+    li {
       margin: 10px 0;
     }
   }
 
+  #tell {
+    font-size: 18px;
+    margin: 20px 0;
+    text-rendering: optimizeLegibility;
+    color: #050505;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: initial;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+}
+
+.textImage{
+  display: flex;
+  @media screen and (max-device-width: 500px) {
+    display: block;
+  }
+
+}
+.textXXX{
+  padding: 30px;
+  width: 50% ;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+  }
+}
+#imgGif {
+  display: block;
+  width: 30%;
+ border-radius: 30px;
+  height: 600px;
+  margin-top: 130px;
+  @media screen and (max-device-width: 500px) {
+    height: 400px;
+  }
 }

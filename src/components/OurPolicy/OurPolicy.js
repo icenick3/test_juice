@@ -1,22 +1,14 @@
 import React from 'react';
 import './OurPolicy.css';
-import img from '../../images/img_9.png'
-import img2 from '../../images/img_10.png'
-import img3 from '../../images/img_11.png'
-import img4 from '../../images/img_12.png'
-import FAQ from '../../logotypes/FAQ.png'
-import shield from '../../logotypes/shield.png'
-import car from '../../logotypes/truck-with-six-wheels.png'
-
 
 const OurPolicy = () => {
     return (
         <div id="ourPolicy">
             <div id="img">
-                <img src={img} alt=""/>
+                <img src="https://loveriq.online/sweep/za1/img_9.png" alt=""/>
             </div>
             <div className="premiumProducts">
-                <img src={img2} alt=""/>
+                <img src="https://loveriq.online/sweep/za1/img_10.png" alt=""/>
                 <div className="text">
                     <h1>SAMSETY SHOP: Your Destination for Premium Products</h1>
                     <br/>
@@ -38,10 +30,10 @@ const OurPolicy = () => {
                         items will arrive in a timely and efficient manner.
                     </p>
                 </div>
-                <img src={img3} alt=""/>
+                <img src="https://loveriq.online/sweep/za1/img_11.png" alt=""/>
             </div>
             <div className="premiumProducts">
-                <img src={img4} alt=""/>
+                <img src="https://loveriq.online/sweep/za1/img_12.png" alt=""/>
                 <div className="text">
                     <h1>Exceptional Customer Service</h1>
                     <br/>
@@ -54,17 +46,17 @@ const OurPolicy = () => {
             <div className="articles">
                 <div id="articleMain">
                     <div>
-                        <img src={FAQ} alt=""/>
+                        <img src="https://loveriq.online/sweep/za1/FAQ.png" alt=""/>
                         <h2>FAQ's</h2>
                         <p>Click Here</p>
                     </div>
                     <div>
-                        <img src={shield} alt=""/>
+                        <img src="https://loveriq.online/sweep/za1/shield.png" alt=""/>
                         <h2>Return Policy</h2>
                         <p>Click Here</p>
                     </div>
                     <div>
-                        <img src={car} alt=""/>
+                        <img src="https://loveriq.online/sweep/za1/truck-with-six-wheels.png" alt=""/>
                         <h2>Shipping Information</h2>
                         <p>Click Here</p>
                     </div>

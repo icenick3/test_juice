@@ -1,7 +1,7 @@
 import React from 'react';
 import './BlackFooter.css'
 
-const BlackFooter = () => {
+const BlackFooter = ({setReturn, setShiping}) => {
     return (
         <div id="blackFooter">
             <div id="mainBlackFooter">
@@ -14,7 +14,11 @@ const BlackFooter = () => {
                         essentials, we bring you the future of living, today.
                     </p>
                     <br/>
-                    <p>admin@futurelivinghq.com</p>
+                    <p>support@samsety.shop</p>
+                    <br/>
+                    <p>206 Duvernoy St, Constantia Park, Pretoria, 0010, South Africa</p>
+                    <br/>
+                    <p>Cell: +27 (0) 87 012 5788</p>
                 </div>
                 <div id="SEFooter">
                     <h2>Quick Links</h2>
@@ -22,8 +26,8 @@ const BlackFooter = () => {
                         <li>About Us</li>
                         <li>Contact Us</li>
                         <li>FAQ's</li>
-                        <li>Return Policy</li>
-                        <li>Shipping Information</li>
+                        <li onClick={()=> setReturn(true)}>Return Policy</li>
+                        <li onClick={()=> setShiping(true)}>Shipping Information</li>
                     </ul>
                 </div>
                 <div id="TEFooter">

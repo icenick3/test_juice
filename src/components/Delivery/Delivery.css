@@ -43,7 +43,7 @@
   width: 33.33%;
 }
 #delivery .Details {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: left;
   background: #faf8ff;
   padding: 15px;
@@ -51,10 +51,20 @@
   font-weight: 600;
   display: flex;
 }
+@media screen and (max-device-width: 1800px) and (min-device-width: 500px) {
+  #delivery .Details {
+    display: none;
+  }
+}
 #delivery .Details #rating {
   width: 15%;
   justify-content: right;
   margin: 0 10px 0 auto;
+}
+@media screen and (max-device-width: 500px) {
+  #delivery .Details #rating {
+    width: 20%;
+  }
 }
 #delivery .Details #plusForRating {
   margin: 8px 10px 0 10px;

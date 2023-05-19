@@ -19,6 +19,12 @@
   width: 33.33%;
   margin: 0 30px;
 }
+@media screen and (max-device-width: 500px) {
+  #preFooter #mainPreFooter .preFooterElement {
+    margin: 0 15px;
+    width: 50%;
+  }
+}
 #preFooter #mainPreFooter .preFooterElement img {
   width: 50px;
   height: 50px;
@@ -34,6 +40,29 @@
 }
 #preFooter #mainPreFooter .preFooterElement p {
   font-size: 16px;
+}
+
+@media screen and (max-device-width: 500px) {
+  #notDisplayMobile {
+    display: none;
+  }
+}
+
+#DisplayMobile {
+  display: none;
+}
+@media screen and (max-device-width: 500px) {
+  #DisplayMobile {
+    display: block;
+    width: 50%;
+    margin: 40px auto 0 auto;
+    text-align: center;
+  }
+  #DisplayMobile img {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=PreFooter.css.map */

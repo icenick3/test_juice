@@ -5,6 +5,7 @@
   @media screen and (max-device-width: 500px) {
     width: 90%;
   }
+
   #mainPreFooter {
     width: 100%;
     margin: 0 auto;
@@ -16,6 +17,11 @@
     .preFooterElement {
       width: 33.33%;
       margin: 0 30px;
+      @media screen and (max-device-width: 500px) {
+        margin: 0 15px;
+        width: 50%;
+      }
+
       img {
         width: 50px;
         height: 50px;
@@ -24,12 +30,36 @@
           height: 30px;
         }
       }
-      h2{
+
+      h2 {
         font-size: 15px;
       }
+
       p {
         font-size: 16px;
+
       }
+    }
+  }
+}
+
+#notDisplayMobile {
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+}
+
+#DisplayMobile {
+  display: none;
+  @media screen and (max-device-width: 500px) {
+    display: block;
+    width: 50%;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    img{
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
     }
   }
 }
