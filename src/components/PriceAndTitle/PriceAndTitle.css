@@ -80,4 +80,10 @@
   margin: 4px 5px 4px 0;
 }
 
+#disText {
+  padding-left: 10px;
+  font-size: 20px;
+  color: red;
+}
+
 /*# sourceMappingURL=PriceAndTitle.css.map */

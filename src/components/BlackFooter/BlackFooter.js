@@ -1,7 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './BlackFooter.css'
 
-const BlackFooter = ({setReturn, setShiping}) => {
+const BlackFooter = ({setReturn, setShiping, setAbout, setContactUs, setFaq}) => {
+
+    const [active, setActive] = useState(false)
+
+    const onsubmit = (e) => {
+        e.preventDefault()
+        e.target.reset()
+        setActive(true)
+        setTimeout(()=>{
+            setActive(false)
+        }, 5000)
+    }
+
     return (
         <div id="blackFooter">
             <div id="mainBlackFooter">
@@ -23,9 +35,9 @@ const BlackFooter = ({setReturn, setShiping}) => {
                 <div id="SEFooter">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>FAQ's</li>
+                        <li onClick={()=> setAbout(true)}>About Us</li>
+                        <li onClick={()=> setContactUs(true)}>Contact Us</li>
+                        <li onClick={()=> setFaq(true)}>FAQ's</li>
                         <li onClick={()=> setReturn(true)}>Return Policy</li>
                         <li onClick={()=> setShiping(true)}>Shipping Information</li>
                     </ul>
@@ -33,8 +45,11 @@ const BlackFooter = ({setReturn, setShiping}) => {
                 <div id="TEFooter">
                     <h2>Stay in the Know!</h2>
                     <p>Subscribe to Our Newsletter</p>
-                    <input type="text" placeholder={"Your email"}/>
-                    <button>Subscribe</button>
+                    <form onSubmit={onsubmit}>
+                        <input type="email" placeholder={"Your email"}/>
+                        {active && <p>Thank you for subscribing to our store</p>}
+                        <button>Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>

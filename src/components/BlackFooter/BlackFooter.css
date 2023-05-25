@@ -39,6 +39,10 @@
 #blackFooter #mainBlackFooter #SEFooter li {
   list-style: none;
 }
+#blackFooter #mainBlackFooter #SEFooter li:hover {
+  cursor: pointer;
+  color: lightgray;
+}
 #blackFooter #mainBlackFooter #TEFooter {
   width: 40%;
 }
@@ -53,7 +57,10 @@
 #blackFooter #mainBlackFooter #TEFooter p {
   margin: 0 0 10px 0;
 }
-#blackFooter #mainBlackFooter #TEFooter input {
+#blackFooter #mainBlackFooter #TEFooter form p {
+  padding: 20px 0 0 0;
+}
+#blackFooter #mainBlackFooter #TEFooter form input {
   display: block;
   width: 80%;
   color: #fff;
@@ -64,10 +71,10 @@
   outline: none;
   border: 1px solid #1e1e1e;
 }
-#blackFooter #mainBlackFooter #TEFooter input:hover {
+#blackFooter #mainBlackFooter #TEFooter form input:hover {
   cursor: pointer;
 }
-#blackFooter #mainBlackFooter #TEFooter button {
+#blackFooter #mainBlackFooter #TEFooter form button {
   width: 80%;
   background-color: #d22e2e;
   padding: 10px;
@@ -79,7 +86,7 @@
   border-radius: 10px;
   margin-top: 10px;
 }
-#blackFooter #mainBlackFooter #TEFooter button:hover {
+#blackFooter #mainBlackFooter #TEFooter form button:hover {
   cursor: pointer;
 }
 

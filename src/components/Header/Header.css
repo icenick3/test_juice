@@ -46,6 +46,9 @@ header #header #menu img {
   width: 25px;
   height: 25px;
 }
+header #header #menu img:hover {
+  cursor: pointer;
+}
 header #header #logoShop {
   width: 50%;
   margin: 0 auto;

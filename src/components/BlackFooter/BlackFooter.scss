@@ -29,6 +29,10 @@
       }
       li {
         list-style: none;
+        &:hover{
+          cursor: pointer;
+          color: lightgray;
+        }
       }
     }
     #TEFooter{
@@ -42,35 +46,41 @@
       p{
         margin: 0 0 10px 0;
       }
-      input{
-        display: block;
-        width: 80%;
-        color: #fff;
-        padding: 6px 10px;
-        font-size: 17px;
-        border-radius: 10px;
-        background-color: #1e1e1e;
-        outline: none;
-        border: 1px solid #1e1e1e;
-        &:hover {
-          cursor: pointer;
+      form{
+        p{
+          padding: 20px 0 0 0;
+        }
+        input{
+          display: block;
+          width: 80%;
+          color: #fff;
+          padding: 6px 10px;
+          font-size: 17px;
+          border-radius: 10px;
+          background-color: #1e1e1e;
+          outline: none;
+          border: 1px solid #1e1e1e;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        button {
+          width: 80%;
+          background-color: #d22e2e;
+          padding: 10px;
+          font-size: 23px;
+          font-weight: 400;
+          color: white;
+          outline: none;
+          border: none;
+          border-radius: 10px;
+          margin-top: 10px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
-      button {
-        width: 80%;
-        background-color: #d22e2e;
-        padding: 10px;
-        font-size: 23px;
-        font-weight: 400;
-        color: white;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        margin-top: 10px;
-        &:hover {
-          cursor: pointer;
-        }
-      }
+
     }
   }
 }

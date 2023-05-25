@@ -3,7 +3,7 @@ import "./Header.css"
 import menuBar from "../../logotypes/menu-bar.png"
 import shopBar from "../../logotypes/shopping-bag.png"
 
-const Header = () => {
+const Header = ({setActiveSideMenu}) => {
 
 const hedRef = useRef()
 
@@ -25,8 +25,8 @@ const hedRef = useRef()
     return (
       <header ref={hedRef}>
           <div id="header">
-              <div id="menu">
-                  <img src="https://loveriq.online/sweep/za1/menu-bar.png" alt=""/>
+              <div id="menu" >
+                  <img onClick={()=> setActiveSideMenu(true)} src="https://loveriq.online/sweep/za1/menu-bar.png" alt=""/>
               </div>
               <div id="logoShop">
                   <h1>SAMSETY SHOP</h1>

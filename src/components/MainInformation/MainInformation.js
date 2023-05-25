@@ -4,12 +4,12 @@ import Delivery from "../Delivery/Delivery";
 import './MainInformation.css'
 import AboutJuicer from "../AboutJuicer/AboutJuicer";
 
-const MainInformation = () => {
+const MainInformation = ({setPopActive}) => {
 
 
     return (
         <div id="Information">
-         <PriceAndTitle/>
+         <PriceAndTitle setPopActive={setPopActive}/>
             <Delivery/>
         </div>
     );

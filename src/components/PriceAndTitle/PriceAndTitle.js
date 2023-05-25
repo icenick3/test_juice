@@ -27,7 +27,7 @@ useEffect(()=> {
         <div id="PriceInfo">
             <h1>JuiceGenie - Portable Electric Blender</h1>
             <div id="stars"><img id="rait" src="https://loveriq.online/sweep/za1/raiting.png" alt=""/>(35)</div>
-            <p><span id="discount">$64.99</span><span id="price">$150.00</span></p>
+            <p><span id="discount">$64.99</span><span id="price">$150.00</span><span id="disText">Discount 80% off</span></p>
             <h3>Colour: {color}</h3>
             <select name="select" id="select" onChange={onChange}>
                 <option value="White">White</option>
