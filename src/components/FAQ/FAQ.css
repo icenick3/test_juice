@@ -1,0 +1,37 @@
+.returnPolicy4 {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 33;
+  overflow: auto;
+}
+.returnPolicy4 h1 {
+  padding: 0 0 20px 0;
+}
+.returnPolicy4 h2 {
+  padding: 20px 0 20px 0;
+}
+.returnBlock4 {
+  background: white;
+  width: 80%;
+  margin: 10vh auto;
+  padding: 30px;
+  border-radius: 20px;
+  transform: scale(0.5);
+  transition: 0.4s all;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=FAQ.css.map */

@@ -1,0 +1,142 @@
+.Coupon {
+  width: 650px;
+  height: 100px;
+  background: black;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.7s show5 ease;
+}
+@media screen and (max-device-width: 500px) {
+  .Coupon {
+    width: 85%;
+    animation: 0.7s show51 ease;
+    top: 30%;
+  }
+}
+.Coupon img {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  top: calc(50% - 15px);
+  left: 20px;
+}
+.Coupon img:hover {
+  cursor: pointer;
+}
+.Coupon p {
+  color: white;
+  font-size: 35px;
+  margin-left: 70px;
+}
+@media screen and (max-device-width: 500px) {
+  .Coupon p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@keyframes show5 {
+  from {
+    right: -650px;
+  }
+  to {
+    right: 0;
+  }
+}
+.coupon2 {
+  right: -600px;
+  animation: 0.7s show6 ease;
+}
+@media screen and (max-device-width: 500px) {
+  .coupon2 {
+    right: -75%;
+    animation: 0.7s show61 ease;
+  }
+}
+
+@keyframes show6 {
+  from {
+    right: 0;
+  }
+  to {
+    right: -600px;
+  }
+}
+@keyframes show61 {
+  from {
+    right: 0;
+  }
+  to {
+    right: -70%;
+  }
+}
+.XXX {
+  right: -595px;
+  animation: 0.3s XXX ease;
+}
+@media screen and (max-device-width: 500px) {
+  .XXX {
+    right: -72%;
+    animation: 0.3s XXX11 ease;
+  }
+}
+
+@keyframes XXX {
+  from {
+    right: -600px;
+  }
+  to {
+    right: -595px;
+  }
+}
+@keyframes XXX11 {
+  from {
+    right: -75%;
+  }
+  to {
+    right: -72%;
+  }
+}
+.XXX2 {
+  right: -600px;
+  animation: 0.3s XXX2 ease;
+}
+@media screen and (max-device-width: 500px) {
+  .XXX2 {
+    right: -75%;
+    animation: 0.3s XXX22 ease;
+  }
+}
+
+@keyframes XXX2 {
+  from {
+    right: -595px;
+  }
+  to {
+    right: -600px;
+  }
+}
+@keyframes XXX22 {
+  from {
+    right: -72%;
+  }
+  to {
+    right: -75%;
+  }
+}
+@keyframes show51 {
+  from {
+    right: -85%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=Coupon.css.map */

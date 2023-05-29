@@ -1,9 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import "./Header.css"
-import menuBar from "../../logotypes/menu-bar.png"
-import shopBar from "../../logotypes/shopping-bag.png"
 
-const Header = ({setActiveSideMenu}) => {
+
+const Header = ({setActiveSideMenu, setPopActive}) => {
 
 const hedRef = useRef()
 
@@ -31,7 +30,7 @@ const hedRef = useRef()
               <div id="logoShop">
                   <h1>SAMSETY SHOP</h1>
               </div>
-              <a id="ShoppingCart" href="{offer_link}">
+              <a id="ShoppingCart" href={"offer"}>
                   <img src="https://loveriq.online/sweep/za1/shopping-bag.png" alt=""/>
               </a>
           </div>

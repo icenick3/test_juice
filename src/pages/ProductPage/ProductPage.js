@@ -17,6 +17,8 @@ import SideMenu from "../../components/SideMenu/SideMenu";
 import AboutUsPopup from "../../components/AboutUsPopup/AboutUsPopup";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import FAQ from "../../components/FAQ/FAQ";
+import PopupChance from "../../components/PopupChance/PopupChance";
+import Coupon from "../../components/Coupon/Coupon";
 
 
 const ProductPage = () => {
@@ -25,9 +27,21 @@ const ProductPage = () => {
     const [about, setAbout] = useState(false)
     const [faq, setFaq] = useState(false)
     const [contactUS, setContactUS] = useState(false)
+    const [spiner, setSpiner] = useState(false)
     const [activeSideMenu, setActiveSideMenu] = useState(false)
     const [shiping, setShiping] = useState(false)
     const [popActive, setPopActive] = useState(false)
+    const [price, setPrice] = useState(false)
+    const [activeCoupon, setActiveCoupon] = useState(false)
+
+
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setSpiner(true)
+        },3000)
+    },[])
+
 
 
     useEffect(() => {
@@ -78,6 +92,18 @@ const ProductPage = () => {
         }
     }, [contactUS])
 
+    // useEffect(() => {
+    //     if (spiner) {
+    //         document.querySelector('.chancePopup').classList.add('show')
+    //         document.querySelector('.chanceContainer ').classList.add('show')
+    //
+    //     } else {
+    //         document.querySelector('.chancePopup').classList.remove('show')
+    //         document.querySelector('.chanceContainer ').classList.remove('show')
+    //
+    //     }
+    // }, [spiner])
+
     useEffect(() => {
         if (shiping) {
             document.querySelector('.returnPolicy1').classList.add('show')
@@ -102,8 +128,6 @@ const ProductPage = () => {
         }
     }, [popActive])
 
-    console.log(popActive)
-
 
     return (
         <div id="productPage">
@@ -111,7 +135,7 @@ const ProductPage = () => {
             <Header setPopActive={setPopActive} setActiveSideMenu={setActiveSideMenu}/>
             <div className="description">
                 <ProductImages/>
-                <MainInformation setPopActive={setPopActive}/>
+                <MainInformation setPopActive={setPopActive} setprice={setPrice}/>
             </div>
             <AboutJuicer/>
             <Comments/>
@@ -122,13 +146,15 @@ const ProductPage = () => {
                 <BlackFooter setReturn={setReturn} setShiping={setShiping} setAbout={setAbout}
                              setContactUs={setContactUS} setFaq={setFaq}/>
             </div>
-            <BotPopup setPopActive={setPopActive}/>
+            <BotPopup setPopActive={setPopActive}  price={price}/>
             <ReturnPolicy setReturn={setReturn}/>
             <Shiping setShiping={setShiping}/>
-            <PopupOffer setPopActive={setPopActive}/>
+            <PopupOffer setPopActive={setPopActive} setReturn={setReturn} setShiping={setShiping}/>
             <AboutUsPopup setAbout={setAbout}/>
             <ContactUs setContactUs={setContactUS}/>
             <FAQ setFAQ={setFaq}/>
+            {/*<PopupChance  setSpiner={setSpiner} setActiveCoupon={setActiveCoupon}/>*/}
+            {/*<Coupon activeCoupon={activeCoupon}/>*/}
             <SideMenu activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu} setReturn={setReturn}
                       setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq}/>
         </div>

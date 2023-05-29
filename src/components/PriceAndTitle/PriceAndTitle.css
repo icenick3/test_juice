@@ -1,6 +1,36 @@
 #PriceInfo {
   padding: 20px;
 }
+#PriceInfo #discountCoupon {
+  font-weight: 600;
+  padding: 10px 0 5px 0;
+}
+#PriceInfo .discountInput input {
+  background: #f2ecff;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 5px 10px 0 0;
+}
+#PriceInfo .discountInput button {
+  border: none;
+  outline: none;
+  color: white;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+#PriceInfo .discountInput button:hover {
+  cursor: pointer;
+}
+@media screen and (max-device-width: 500px) {
+  #PriceInfo .discountInput button {
+    margin: 20px 0 10px 0;
+  }
+}
 #PriceInfo h1 {
   font-size: 30px;
 }
@@ -84,6 +114,11 @@
   padding-left: 10px;
   font-size: 20px;
   color: red;
+}
+
+#discountProcent {
+  padding-top: 10px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=PriceAndTitle.css.map */
