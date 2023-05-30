@@ -60,6 +60,7 @@ header #header #logoShop {
   }
 }
 header #header #logoShop h1 {
+  color: #045e42;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   user-select: none;

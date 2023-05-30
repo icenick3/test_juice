@@ -90,6 +90,9 @@
     display: none;
   }
 }
+#botPopup #botPopupSelect {
+  display: flex;
+}
 @media screen and (max-device-width: 500px) {
   #botPopup #botPopupSelect {
     width: 100%;
@@ -100,11 +103,19 @@
   font-size: 18px;
   width: 100px;
   outline: none;
-  background: #f2ecff;
+  background: #d5ede6;
   border: none;
-  padding: 15px 5px;
+  padding: 15px;
   border-radius: 15px;
   margin: 20px 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  color: inherit;
+  caret-color: inherit;
+  box-sizing: border-box;
+  transition: outline 0.1s ease-in-out;
 }
 @media screen and (max-device-width: 500px) {
   #botPopup #botPopupSelect #selectPopup {
@@ -121,7 +132,7 @@
   font-size: 18px;
   color: white;
   border-radius: 15px;
-  background: black;
+  background: #045e42;
   padding: 15px 20px;
   margin: 20px;
 }

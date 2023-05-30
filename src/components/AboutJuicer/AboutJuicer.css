@@ -28,16 +28,10 @@
 #aboutJuicer p {
   font-size: 16px;
 }
-#aboutJuicer .img {
-  width: 40%;
-}
 @media screen and (max-device-width: 500px) {
   #aboutJuicer .img {
     width: 100%;
   }
-}
-#aboutJuicer #jucier {
-  width: 40%;
 }
 @media screen and (max-device-width: 500px) {
   #aboutJuicer #jucier {

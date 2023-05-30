@@ -34,6 +34,8 @@ const BotPopup = ({setPopActive, price}) => {
         scrollToTop()
     };
 
+    const href = document.querySelector('#buttonOffer').href
+
     return (
         <div ref={popRef} id="botPopup">
             <div id="arrow" onClick={handleScrollToTop}>
@@ -41,19 +43,18 @@ const BotPopup = ({setPopActive, price}) => {
             </div>
             <div id="botPopupMain">
                 <div id="popupContainer">
-                    <img src="https://loveriq.online/sweep/za1/img.jpg" alt=""/>
+                    <img src="https://i.pinimg.com/originals/5e/61/31/5e613144aec7cce60cd2b9af4b7b2ecf.png" alt=""/>
                     <div>
-                        <h2>JuiceGenie - Portable Electric Blender</h2>
-                        {!price &&<p>£ 59.99</p>}
-                        {price &&<p>£ 2.99<span>£ 59.99</span></p>}
+                        <h2>Telescopic Folding Fan</h2>
+                        <p>R 195 <span> R 450</span></p>
                     </div>
                 </div>
                 <div id="botPopupSelect">
                     <select id="selectPopup">
                         <option value="White">White</option>
-                        <option value="Pink">Pink</option>
+                        <option value="Green">Green</option>
                     </select>
-                    <a id="btn" href={"offer"}>
+                    <a id="btn" href={href}>
                         <img src="https://loveriq.online/sweep/za1/whiteBag.png" alt=""/>
                         Add to Cart
                     </a>

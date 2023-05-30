@@ -21,6 +21,8 @@ const hedRef = useRef()
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const href = document.querySelector('#buttonOffer').href
+
     return (
       <header ref={hedRef}>
           <div id="header">
@@ -30,7 +32,7 @@ const hedRef = useRef()
               <div id="logoShop">
                   <h1>SAMSETY SHOP</h1>
               </div>
-              <a id="ShoppingCart" href={"offer"}>
+              <a id="ShoppingCart" href={href}>
                   <img src="https://loveriq.online/sweep/za1/shopping-bag.png" alt=""/>
               </a>
           </div>

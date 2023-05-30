@@ -138,7 +138,7 @@ const ProductPage = () => {
                 <MainInformation setPopActive={setPopActive} setprice={setPrice}/>
             </div>
             <AboutJuicer/>
-            <Comments/>
+            {/*<Comments/>*/}
             <div id="preFooterBlock">
                 <PreFooter/>
             </div>

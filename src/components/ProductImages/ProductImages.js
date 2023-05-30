@@ -171,19 +171,19 @@ const ProductImages = () => {
                      onMouseLeave={onMouseLeave}
                      onMouseUp={onMouseLeave}>
                     <div ref={photoRef} id="photoBlock">
-                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img.jpg" alt=""/>
-                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img2.jpg" alt=""/>
-                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img3.jpg" alt=""/>
-                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img4.jpg" alt=""/>
-                        <img className="mainPhoto " src="https://loveriq.online/sweep/za1/img5.jpg" alt=""/>
+                        <img className="mainPhoto " src="https://i.pinimg.com/originals/5e/61/31/5e613144aec7cce60cd2b9af4b7b2ecf.png" alt=""/>
+                        <img className="mainPhoto " src="https://i.pinimg.com/originals/04/21/3a/04213add1c94a2971e1007b59224e31e.png" alt=""/>
+                        <img className="mainPhoto " src="https://i.pinimg.com/originals/6d/73/81/6d7381d2d5ef7415f16833f789f21025.png" alt=""/>
+                        <img className="mainPhoto " src="https://i.pinimg.com/originals/f8/31/d2/f831d2db02db351c783f92fcce803507.png" alt=""/>
+                        <img className="mainPhoto " src="https://i.pinimg.com/originals/59/82/75/5982754ee9d2dac44d53764daea23a48.png" alt=""/>
                     </div>
                 </div>
                 <div id="photos">
-                    <img ref={refs[0]} src="https://loveriq.online/sweep/za1/img.jpg" className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[1]} src="https://loveriq.online/sweep/za1/img2.jpg" className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[2]} src="https://loveriq.online/sweep/za1/img3.jpg" className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[3]} src="https://loveriq.online/sweep/za1/img4.jpg" className="noVisible" alt="" onClick={onclick}/>
-                    <img ref={refs[4]} src="https://loveriq.online/sweep/za1/img5.jpg" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[0]} src="https://i.pinimg.com/originals/5e/61/31/5e613144aec7cce60cd2b9af4b7b2ecf.png" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[1]} src="https://i.pinimg.com/originals/04/21/3a/04213add1c94a2971e1007b59224e31e.png" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[2]} src="https://i.pinimg.com/originals/6d/73/81/6d7381d2d5ef7415f16833f789f21025.png" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[3]} src="https://i.pinimg.com/originals/f8/31/d2/f831d2db02db351c783f92fcce803507.png" className="noVisible" alt="" onClick={onclick}/>
+                    <img ref={refs[4]} src="https://i.pinimg.com/originals/59/82/75/5982754ee9d2dac44d53764daea23a48.png" className="noVisible" alt="" onClick={onclick}/>
                 </div>
             </div>
         </div>

@@ -7,12 +7,18 @@ const Delivery = () => {
     const [activePlus, setActivePlus] = useState(true)
     const [activePlusReturns, setActivePlusReturns] = useState(true)
     const [date, setDate] = useState(null)
+
+
     const currentDate = new Date();
     const day = currentDate.getDate();
     const month = currentDate.toLocaleString('default', {month: 'short'});
     const formattedDate = `${day} ${month}`;
-    const deliveryDay = day + 4
-    const formattedDeliveryDate = `${deliveryDay} ${month}`;
+
+    const futureDate = new Date(currentDate.getTime() + 4 * 24 * 60 * 60 * 1000);
+    const futureMonth = futureDate.getMonth() + 1; // Додаємо 1, оскільки місяці в JavaScript починаються з 0
+    const futureDay = futureDate.getDate();
+    const month2 = futureDate.toLocaleString('default', {month: 'short'});
+    const formattedDeliveryDate = `${futureDay} ${month2}`;
     const refs = [
         useRef(),
         useRef(),

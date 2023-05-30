@@ -1,7 +1,7 @@
 #PriceInfo {
   padding: 20px;
 
-  #discountCoupon{
+  #discountCoupon {
     font-weight: 600;
     padding: 10px 0 5px 0;
   }
@@ -21,13 +21,15 @@
       border: none;
       outline: none;
       color: white;
-      background: black;
+      background: #045e42;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
+
       &:hover {
         cursor: pointer;
       }
+
       @media screen and (max-device-width: 500px) {
         margin: 20px 0 10px 0;
       }
@@ -71,11 +73,10 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: transparent;
     background-image: none;
     padding: 10px;
     border-radius: 10px;
-    background: #f2ecff;
+    background: #d5ede6;
     border: none;
     color: inherit;
     caret-color: inherit;
@@ -87,29 +88,33 @@
     }
 
     &:hover {
-      outline: 4px solid mediumpurple;
+      outline: 4px solid #045e42;
       cursor: pointer;
     }
   }
 
   #visitors {
+    margin: 20px auto;
     display: flex;
-    margin: 30px 0;
-    font-weight: 400;
-
-    #eye {
-      width: 20px;
-      height: 20px;
-      margin: 2px 10px 0 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    span{
+      background: black;
+      color: white;
+      padding: 2px 7px;
+      border-radius: 10px;
     }
   }
 
   #buttonAddToCart {
-    background: black;
+    background: #045e42;
     color: white;
     text-decoration: none;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 16px 24px;
     font-size: 16px;
     display: flex;
@@ -135,7 +140,90 @@
   color: red;
 }
 
-#discountProcent{
+#discountProcent {
   padding-top: 10px;
   font-weight: 600;
+}
+
+
+#items-count {
+  h2 {
+    padding: 15px 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    color: black;
+  }
+
+  #bar {
+    background: #eae9e9;
+    border: 0 solid #f5f5f5;
+    height: 11px;
+    border-radius: 30px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+  }
+
+  #progressBar {
+    background: #045e42;
+    height: 11px;
+    float: left;
+    border-radius: 30px;
+    width: 22%;
+  }
+
+}
+
+#timerBlock {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  align-items: center;
+  color: #045e42;
+  font-size: 30px;
+  div{
+    position: relative;
+    color: white;
+    background-color: #045e42;
+    float: left;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    width: fit-content;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    p{
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+  }
+  #hours {
+
+  }
+
+  #minutes {
+
+  }
+
+  #seconds {
+
+  }
+}
+
+#h4Text{
+  text-align: center;
+  font-size: 15px;
+  color: #045e42;
+
 }
