@@ -20,11 +20,16 @@ import FAQ from "../../components/FAQ/FAQ";
 import PopupChance from "../../components/PopupChance/PopupChance";
 import Coupon from "../../components/Coupon/Coupon";
 import AirPhones from "../../components/AirPhones/AirPhones";
+import CartPage from "../CartPage/CartPage";
 
 
 const ProductPage = () => {
 
     const [count, setCount] = useState( 0)
+
+    const [showCart, setShowCart] = useState(false)
+    const [showCartFirst, setShowCartFirst] = useState(true)
+    const [src, setSrc] = useState(document.getElementById("buttonOfferBlue").href)
 
     const [returnPolicy, setReturn] = useState(false)
     const [about, setAbout] = useState(false)
@@ -139,23 +144,30 @@ const ProductPage = () => {
             <BlackHeader/>
             <Header setReturn={setReturn}
                     setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq} setPopActive={setPopActive} setActiveSideMenu={setActiveSideMenu}
-                    color2={color2} setColor2={setColor2}/>
-            <div className="description">
-                <ProductImages count={count}/>
-                <MainInformation setPopActive={setPopActive} setprice={setPrice} setCount={setCount} color2={color2} setColor2={setColor2}/>
-            </div>
+                    color2={color2} setColor2={setColor2} setShowCart={setShowCart} setShowCartFirst={setShowCartFirst}/>
+            {!showCart && <div>
+                <div className="description">
+                    <ProductImages count={count}/>
+                    <MainInformation setPopActive={setPopActive} setprice={setPrice} setCount={setCount} color2={color2}
+                                     setColor2={setColor2} setSrc={setSrc} setShowCart={setShowCart} setShowCartFirst={setShowCartFirst}/>
+                </div>
+                <AirPhones color2={color2} setColor2={setColor2}/>
+                <Comments/>
+            </div>}
             {/*<AboutJuicer/>*/}
-            <AirPhones color2={color2} setColor2={setColor2}/>
-            <Comments/>
+
             {/*<div id="preFooterBlock">*/}
             {/*    <PreFooter/>*/}
             {/*</div>*/}
-            <div id="blackFooterContainer">
+            <CartPage setShowCart={setShowCart} showCart={showCart} showCartFirst={showCartFirst} src={src}/>
+                <div id="blackFooterContainer">
                 <BlackFooter setReturn={setReturn} setShiping={setShiping} setAbout={setAbout}
-                             setContactUs={setContactUS} setFaq={setFaq}/>
-            </div>
-            <BotPopup setPopActive={setPopActive}  price={price} color2={color2} setColor2={setColor2} setCount={setCount}/>
-            <ReturnPolicy setReturn={setReturn}/>
+                setContactUs={setContactUS} setFaq={setFaq}/>
+                </div>
+            {!showCart && <BotPopup setPopActive={setPopActive} price={price} color2={color2} setColor2={setColor2}
+                       setCount={setCount} setSrc={setSrc} setShowCart={setShowCart}
+                       setShowCartFirst={setShowCartFirst}/>
+            }            <ReturnPolicy setReturn={setReturn}/>
             <Shiping setShiping={setShiping}/>
             <PopupOffer setPopActive={setPopActive} setReturn={setReturn} setShiping={setShiping}/>
             <AboutUsPopup setAbout={setAbout}/>
@@ -165,6 +177,7 @@ const ProductPage = () => {
             {/*<Coupon activeCoupon={activeCoupon}/>*/}
             <SideMenu activeSideMenu={activeSideMenu} setActiveSideMenu={setActiveSideMenu} setReturn={setReturn}
                       setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq}/>
+
         </div>
     );
 };

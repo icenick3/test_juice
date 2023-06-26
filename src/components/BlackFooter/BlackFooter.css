@@ -91,13 +91,13 @@
 }
 
 .ARText {
-  padding: 50px 20% 0 20%;
+  padding: 50px 20% 70px 20%;
   opacity: 0.8;
 }
 @media screen and (max-device-width: 500px) {
   .ARText {
     font-size: 12px;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 20px 40px 20px;
   }
 }
 

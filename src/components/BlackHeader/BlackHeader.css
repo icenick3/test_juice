@@ -6,6 +6,8 @@
   text-align: center;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 22;
 }
 .BlackHeader .text-change {
   display: block;

@@ -3,7 +3,7 @@ import './botPopup.css'
 
 
 
-const BotPopup = ({setPopActive, price, setColor2, color2, setCount}) => {
+const BotPopup = ({setPopActive, price, setColor2, color2, setCount, setSrc, setShowCart, setShowCartFirst}) => {
 
     const popRef = useRef()
 
@@ -38,14 +38,19 @@ const BotPopup = ({setPopActive, price, setColor2, color2, setCount}) => {
         setColor2(e.target.value)
         if (e.target.value === 'Ice Blue'){
             setCount(0)
+            setSrc(document.getElementById("buttonOfferBlue").href)
         } else if (e.target.value === 'Modern Grey'){
             setCount(2)
+            setSrc(document.getElementById("buttonOfferGrey").href)
         } else if (e.target.value === 'Pink Lotus'){
             setCount(1)
+            setSrc(document.getElementById("buttonOfferPink").href)
         } else if (e.target.value === 'Sapphire Blue'){
             setCount(3)
+            setSrc(document.getElementById("buttonOfferPurple").href)
         } else if (e.target.value === 'Youth Green'){
             setCount(4)
+            setSrc(document.getElementById("buttonOfferGreen").href)
         }
     }
 
@@ -63,7 +68,7 @@ const BotPopup = ({setPopActive, price, setColor2, color2, setCount}) => {
                     {color2 === "Youth Green" && <img src="https://i.pinimg.com/originals/6d/9a/49/6d9a49056cc81a2a6998c2602f209c1f.jpg" alt=""/>}
                     <div>
                         <h2>ACEFLOWS™ - CRYSTAL EARBUDS</h2>
-                        <p><span> £ 6,99 </span> £ 34,99</p>
+                        <p><span> £ 34,99</span> £ 6,99</p>
                     </div>
                 </div>
                 <div id="botPopupSelect">
@@ -74,21 +79,13 @@ const BotPopup = ({setPopActive, price, setColor2, color2, setCount}) => {
                         <option value="Sapphire Blue">Sapphire Blue</option>
                         <option value="Youth Green">Youth Green</option>
                     </select>
-                    {color2 === "Ice Blue" && <a id="btn" href={document.querySelector("#buttonOfferBlue").href}>
+                    <a  onClick={()=>{
+                       setShowCart(true)
+                        setShowCartFirst(false)
+                    }}
+                    id="btn" >
                         Buy now
-                    </a>}
-                    {color2 === "Modern Grey" && <a id="btn" href={document.querySelector("#buttonOfferGrey").href}>
-                        Buy now
-                    </a>}
-                    {color2 === "Youth Green" && <a id="btn" href={document.querySelector("#buttonOfferGreen").href}>
-                        Buy now
-                    </a>}
-                    {color2 === "Pink Lotus" && <a id="btn" href={document.querySelector("#buttonOfferPink").href}>
-                        Buy now
-                    </a>}
-                    {color2 === "Sapphire Blue" && <a id="btn" href={document.querySelector("#buttonOfferPurple").href}>
-                        Buy now
-                    </a>}
+                    </a>
                 </div>
             </div>
         </div>

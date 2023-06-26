@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import './PriceAndTitle.css'
 
 
-const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2}) => {
+const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2, setSrc, setShowCartFirst, setShowCart}) => {
     const [visitor, setVisitors] = useState(196)
     const [items, setItems] = useState(13)
     const [color, setColor] = useState("White")
@@ -132,14 +132,19 @@ const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2}) =>
         setColor2(e.target.value)
         if (e.target.value === 'Ice Blue'){
             setCount(0)
+            setSrc(document.getElementById("buttonOfferBlue").href)
         } else if (e.target.value === 'Modern Grey'){
             setCount(2)
+            setSrc(document.getElementById("buttonOfferGrey").href)
         } else if (e.target.value === 'Pink Lotus'){
             setCount(1)
+            setSrc(document.getElementById("buttonOfferPink").href)
         } else if (e.target.value === 'Sapphire Blue'){
             setCount(3)
+            setSrc(document.getElementById("buttonOfferPurple").href)
         } else if (e.target.value === 'Youth Green'){
             setCount(4)
+            setSrc(document.getElementById("buttonOfferGreen").href)
         }
     }
 
@@ -147,7 +152,7 @@ const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2}) =>
     return (
         <div id="PriceInfo">
             <h1>ACEFLOWS™ - CRYSTAL EARBUDS</h1>
-            <p><span id="price" >£ 6,99</span><span id="discount"> £ 34.99 </span><span className="vente">Sale</span></p>
+            <p><span id="price" >£ 34,99</span><span id="discount"> £ 6,99 </span><span className="vente">Sale</span></p>
             <p className="Taxes">incluses VAT</p>
             <div id="stars"><img id="rait" src="https://loveriq.online/sweep/za1/raiting.png" alt=""/>(9)</div>
             {/*<p id="discountCoupon" >Discount coupon</p>*/}
@@ -167,23 +172,14 @@ const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2}) =>
                 <option value="Sapphire Blue">Sapphire Blue</option>
                 <option value="Youth Green">Youth Green</option>
             </select>
-
-            <p className="textUnder">Take part in our contest and get a chance to get the prize by clicking on the button below</p>
-            {color2 === "Ice Blue" && <a id="buttonAddToCart" href={document.querySelector("#buttonOfferBlue").href}>
+            {/*<p className="textUnder">Take part in our contest and get a chance to get the prize by clicking on the button below</p>*/}
+            <a onClick={()=> {
+                setShowCart(true)
+                setShowCartFirst(false)
+            }
+            } id="buttonAddToCart" >
                 Buy now
-            </a>}
-            {color2 === "Modern Grey" && <a id="buttonAddToCart" href={document.querySelector("#buttonOfferGrey").href}>
-                Buy now
-            </a>}
-            {color2 === "Youth Green" && <a id="buttonAddToCart" href={document.querySelector("#buttonOfferGreen").href}>
-                Buy now
-            </a>}
-            {color2 === "Pink Lotus" && <a id="buttonAddToCart" href={document.querySelector("#buttonOfferPink").href}>
-                Buy now
-            </a>}
-            {color2 === "Sapphire Blue" && <a id="buttonAddToCart" href={document.querySelector("#buttonOfferPurple").href}>
-                Buy now
-            </a>}
+            </a>
         </div>
     );
 };

@@ -33,11 +33,6 @@
   border-radius: 50px;
   height: 600px;
 }
-@media screen and (max-device-width: 500px) {
-  #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
-    height: 370px;
-  }
-}
 @media screen and (min-device-width: 2000px) {
   #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
     height: 800px;
@@ -98,6 +93,26 @@
 .sliderBlock div img {
   display: block;
   width: 100%;
+}
+@media screen and (min-device-width: 2500px) {
+  .sliderBlock div img {
+    margin: 230px auto 0 auto;
+  }
+}
+@media screen and (min-device-width: 2040px) {
+  .sliderBlock div img {
+    margin: 150px auto 0 auto;
+  }
+}
+@media screen and (min-device-width: 1910px) {
+  .sliderBlock div img {
+    margin: 150px auto 0 auto;
+  }
+}
+@media screen and (min-device-width: 1610px) {
+  .sliderBlock div img {
+    margin: 100px auto 0 auto;
+  }
 }
 
 /*# sourceMappingURL=ProductImages.css.map */

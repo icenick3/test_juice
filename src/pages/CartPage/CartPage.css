@@ -1,3 +1,56 @@
+.cart {
+  display: none;
+  position: relative;
+}
 
+.frameBlock {
+  overflow: hidden;
+}
+.frameBlock iframe {
+  width: 100vw;
+  height: 1000px;
+  overflow: hidden;
+}
+@media screen and (max-device-width: 390px) {
+  .frameBlock iframe {
+    height: 1940px;
+  }
+}
+@media screen and (max-device-width: 414px) {
+  .frameBlock iframe {
+    height: 1900px;
+  }
+}
+@media screen and (max-device-width: 375px) {
+  .frameBlock iframe {
+    height: 1910px;
+  }
+}
+
+.sss {
+  display: block;
+}
+
+.closeText {
+  background-color: #fbfcfe;
+  width: 55%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (max-device-width: 500px) {
+  .closeText {
+    display: none;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+}
 
 /*# sourceMappingURL=CartPage.css.map */
