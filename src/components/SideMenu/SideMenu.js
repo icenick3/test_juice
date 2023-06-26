@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './SideMenu.css'
 
 const SideMenu = ({activeSideMenu, setActiveSideMenu, setReturn, setShiping ,setAbout, setContactUs, setFAQ}) => {
 
+
+    const sideRef = useRef()
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            if (sideRef.current){
+                sideRef.current.style.opacity = "1"
+            }
+        },2000)
+
+    },[])
+
     return (
-        <div className={activeSideMenu ? "sideMenu" : "sideMenu nonSideMenu"}>
+        <div ref={sideRef} className={activeSideMenu ? "sideMenu" : "sideMenu nonSideMenu"}>
             <div className="containerSideMenu">
                 <div className="menuImg">
                     <img id='withFilter' src="https://loveriq.online/sweep/za1/menu-bar.png" alt=""/>
@@ -16,7 +28,7 @@ const SideMenu = ({activeSideMenu, setActiveSideMenu, setReturn, setShiping ,set
                 <p onClick={()=> {
                     setAbout(true)
                     setActiveSideMenu(false)
-                }}>About us</p>
+                }}>Privacy Policy</p>
                 <p onClick={()=> {
                     setContactUs(true)
                     setActiveSideMenu(false)
@@ -24,19 +36,15 @@ const SideMenu = ({activeSideMenu, setActiveSideMenu, setReturn, setShiping ,set
                 <p onClick={()=> {
                     setFAQ(true)
                     setActiveSideMenu(false)
-                }}>FAQ's</p>
+                }}>Terms of Service</p>
                 <p onClick={()=> {
                     setReturn(true)
                     setActiveSideMenu(false)
-                }}>Return Policy</p>
-                <p onClick={()=> {
-                    setShiping(true)
-                    setActiveSideMenu(false)
-                }}>Shipping Information</p>
+                }}>Return policy</p>
                 <ul>
-                    <li>support@samsety.shop</li>
-                    <li>206 Duvernoy St, Constantia Park, Pretoria, 0010, South Africa</li>
-                    <li>Cell: +27 (0) 87 012 5788</li>
+                    <li>support@sound.scape</li>
+                    <li>49 Dalberg Rd, London SW2 1AJ, Great Britain</li>
+                    <li>Cell: +447909777249</li>
                 </ul>
             </div>
         </div>

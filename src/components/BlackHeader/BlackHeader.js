@@ -4,7 +4,7 @@ import './BlackHeader.css'
 const BlackHeader = () => {
 
     const [text, setText] = useState(0)
-    const sentences = ["FUTURE VIP | Sale ends in 8 hours!", "Free shipping worldwide | 30-Day free returns"];
+    const sentences = ["VIITOR VIP | Vânzarea se încheie în 8 ore!", "Livrare gratuită în toată lumea | Retur gratuit în 30 de zile"];
     useEffect(() => {
         const intervalId = setInterval(() => {
             setText(text === 0 ? 1 : 0);
@@ -15,7 +15,7 @@ const BlackHeader = () => {
     return (
         <div className="BlackHeader">
             <h1 className='text-change'>
-                {sentences[text]}
+                Free Shipping on All Orders in Europe!
             </h1>
         </div>
     );

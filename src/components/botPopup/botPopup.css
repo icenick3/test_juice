@@ -8,6 +8,7 @@
   border-top: 1px solid black;
   transition: transform 0.5s ease-out;
   transform: translateY(200%);
+  z-index: 1111;
 }
 @media screen and (max-device-width: 500px) {
   #botPopup {
@@ -66,7 +67,7 @@
 }
 #botPopup #botPopupMain #popupContainer p {
   font-size: 16px;
-  color: #d22e2e;
+  color: black;
   margin: 5px 0 10px 10px;
   font-weight: 600;
 }
@@ -76,7 +77,8 @@
   }
 }
 #botPopup #botPopupMain #popupContainer p span {
-  color: #a7a7a7;
+  color: #535353;
+  font-weight: 400;
   text-decoration: line-through;
 }
 #botPopup #botPopupMain #popupContainer img {
@@ -99,11 +101,11 @@
     padding: 10px;
   }
 }
-#botPopup #botPopupSelect #selectPopup {
+#botPopup #botPopupSelect select {
   font-size: 18px;
-  width: 100px;
+  width: fit-content;
   outline: none;
-  background: #d5ede6;
+  background: #c6dcf7;
   border: none;
   padding: 15px;
   border-radius: 15px;
@@ -118,11 +120,11 @@
   transition: outline 0.1s ease-in-out;
 }
 @media screen and (max-device-width: 500px) {
-  #botPopup #botPopupSelect #selectPopup {
+  #botPopup #botPopupSelect select {
     display: none;
   }
 }
-#botPopup #botPopupSelect #selectPopup:hover {
+#botPopup #botPopupSelect select:hover {
   cursor: pointer;
 }
 #botPopup #botPopupSelect #btn {
@@ -132,9 +134,10 @@
   font-size: 18px;
   color: white;
   border-radius: 15px;
-  background: #045e42;
+  background: #477cdc;
   padding: 15px 20px;
   margin: 20px;
+  font-weight: 400;
 }
 @media screen and (max-device-width: 500px) {
   #botPopup #botPopupSelect #btn {

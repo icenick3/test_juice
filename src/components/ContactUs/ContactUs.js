@@ -17,6 +17,9 @@ const ContactUs = ({setContactUs}) => {
     return (
         <div className="returnPolicy3" onClick={() => setContactUs(false)}>
             <div className="returnBlock3" onClick={(e)=> e.stopPropagation()}>
+                <img className="closeGuide"
+                     src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt=""
+                     onClick={() => setContactUs(false)}/>
                 <h1>Contact</h1>
                 {active && <p>
                     Thanks for contacting us. We'll get back to you as soon as possible.
@@ -32,7 +35,6 @@ const ContactUs = ({setContactUs}) => {
                 </textarea>
                     <button>Send</button>
                 </form>
-
             </div>
         </div>
     );

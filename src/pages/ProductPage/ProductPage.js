@@ -19,9 +19,12 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import FAQ from "../../components/FAQ/FAQ";
 import PopupChance from "../../components/PopupChance/PopupChance";
 import Coupon from "../../components/Coupon/Coupon";
+import AirPhones from "../../components/AirPhones/AirPhones";
 
 
 const ProductPage = () => {
+
+    const [count, setCount] = useState( 0)
 
     const [returnPolicy, setReturn] = useState(false)
     const [about, setAbout] = useState(false)
@@ -33,6 +36,8 @@ const ProductPage = () => {
     const [popActive, setPopActive] = useState(false)
     const [price, setPrice] = useState(false)
     const [activeCoupon, setActiveCoupon] = useState(false)
+
+    const [color2, setColor2] = useState('Ice Blue')
 
 
 
@@ -132,21 +137,24 @@ const ProductPage = () => {
     return (
         <div id="productPage">
             <BlackHeader/>
-            <Header setPopActive={setPopActive} setActiveSideMenu={setActiveSideMenu}/>
+            <Header setReturn={setReturn}
+                    setShiping={setShiping} setAbout={setAbout} setContactUs={setContactUS} setFAQ={setFaq} setPopActive={setPopActive} setActiveSideMenu={setActiveSideMenu}
+                    color2={color2} setColor2={setColor2}/>
             <div className="description">
-                <ProductImages/>
-                <MainInformation setPopActive={setPopActive} setprice={setPrice}/>
+                <ProductImages count={count}/>
+                <MainInformation setPopActive={setPopActive} setprice={setPrice} setCount={setCount} color2={color2} setColor2={setColor2}/>
             </div>
-            <AboutJuicer/>
-            {/*<Comments/>*/}
-            <div id="preFooterBlock">
-                <PreFooter/>
-            </div>
+            {/*<AboutJuicer/>*/}
+            <AirPhones color2={color2} setColor2={setColor2}/>
+            <Comments/>
+            {/*<div id="preFooterBlock">*/}
+            {/*    <PreFooter/>*/}
+            {/*</div>*/}
             <div id="blackFooterContainer">
                 <BlackFooter setReturn={setReturn} setShiping={setShiping} setAbout={setAbout}
                              setContactUs={setContactUS} setFaq={setFaq}/>
             </div>
-            <BotPopup setPopActive={setPopActive}  price={price}/>
+            <BotPopup setPopActive={setPopActive}  price={price} color2={color2} setColor2={setColor2} setCount={setCount}/>
             <ReturnPolicy setReturn={setReturn}/>
             <Shiping setShiping={setShiping}/>
             <PopupOffer setPopActive={setPopActive} setReturn={setReturn} setShiping={setShiping}/>

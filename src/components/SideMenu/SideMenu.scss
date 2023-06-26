@@ -4,16 +4,17 @@
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 44;
+  z-index: 1144;
   color: white;
   animation: 0.5s show ease;
+  opacity: 0;
   @media screen and (max-device-width: 500px) {
     width: 75vw;
     animation: 0.5s show3 ease;
   }
 
   .containerSideMenu {
-    background: #045e42;
+    background: #477cdc;
     width: 15vw;
     height: 100vh;
     @media screen and (max-device-width: 500px) {

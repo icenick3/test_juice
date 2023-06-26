@@ -3,7 +3,7 @@ import './botPopup.css'
 
 
 
-const BotPopup = ({setPopActive, price}) => {
+const BotPopup = ({setPopActive, price, setColor2, color2, setCount}) => {
 
     const popRef = useRef()
 
@@ -34,7 +34,20 @@ const BotPopup = ({setPopActive, price}) => {
         scrollToTop()
     };
 
-    const href = document.querySelector('#buttonOffer').href
+    const onChange = (e) => {
+        setColor2(e.target.value)
+        if (e.target.value === 'Ice Blue'){
+            setCount(0)
+        } else if (e.target.value === 'Modern Grey'){
+            setCount(2)
+        } else if (e.target.value === 'Pink Lotus'){
+            setCount(1)
+        } else if (e.target.value === 'Sapphire Blue'){
+            setCount(3)
+        } else if (e.target.value === 'Youth Green'){
+            setCount(4)
+        }
+    }
 
     return (
         <div ref={popRef} id="botPopup">
@@ -43,21 +56,39 @@ const BotPopup = ({setPopActive, price}) => {
             </div>
             <div id="botPopupMain">
                 <div id="popupContainer">
-                    <img src="https://i.pinimg.com/originals/5e/61/31/5e613144aec7cce60cd2b9af4b7b2ecf.png" alt=""/>
+                    {color2 === "Ice Blue" && <img src="https://i.pinimg.com/originals/7f/be/94/7fbe94a15ca81d226cdf8a7dcebea36f.jpg" alt=""/>}
+                    {color2 === "Pink Lotus" && <img src="https://i.pinimg.com/originals/54/10/f6/5410f66b73596ed5b9ebaa027d62368d.jpg" alt=""/>}
+                    {color2 === "Modern Grey" && <img src="https://i.pinimg.com/originals/b1/bf/61/b1bf61e7d50048f19441fffe6ebe9828.jpg" alt=""/>}
+                    {color2 === "Sapphire Blue" && <img src="https://i.pinimg.com/originals/b3/c4/46/b3c44681e4e0ea04d0041437de93a69c.jpg" alt=""/>}
+                    {color2 === "Youth Green" && <img src="https://i.pinimg.com/originals/6d/9a/49/6d9a49056cc81a2a6998c2602f209c1f.jpg" alt=""/>}
                     <div>
-                        <h2>Telescopic Folding Fan</h2>
-                        <p>R 195 <span> R 450</span></p>
+                        <h2>ACEFLOWS™ - CRYSTAL EARBUDS</h2>
+                        <p><span> £ 6,99 </span> £ 34,99</p>
                     </div>
                 </div>
                 <div id="botPopupSelect">
-                    <select id="selectPopup">
-                        <option value="White">White</option>
-                        <option value="Green">Green</option>
+                    <select name="select" id="select" onChange={onChange}>
+                        <option value="Ice Blue">Ice Blue</option>
+                        <option value="Pink Lotus">Pink Lotus</option>
+                        <option value="Modern Grey">Modern Grey</option>
+                        <option value="Sapphire Blue">Sapphire Blue</option>
+                        <option value="Youth Green">Youth Green</option>
                     </select>
-                    <a id="btn" href={href}>
-                        <img src="https://loveriq.online/sweep/za1/whiteBag.png" alt=""/>
-                        Add to Cart
-                    </a>
+                    {color2 === "Ice Blue" && <a id="btn" href={document.querySelector("#buttonOfferBlue").href}>
+                        Buy now
+                    </a>}
+                    {color2 === "Modern Grey" && <a id="btn" href={document.querySelector("#buttonOfferGrey").href}>
+                        Buy now
+                    </a>}
+                    {color2 === "Youth Green" && <a id="btn" href={document.querySelector("#buttonOfferGreen").href}>
+                        Buy now
+                    </a>}
+                    {color2 === "Pink Lotus" && <a id="btn" href={document.querySelector("#buttonOfferPink").href}>
+                        Buy now
+                    </a>}
+                    {color2 === "Sapphire Blue" && <a id="btn" href={document.querySelector("#buttonOfferPurple").href}>
+                        Buy now
+                    </a>}
                 </div>
             </div>
         </div>

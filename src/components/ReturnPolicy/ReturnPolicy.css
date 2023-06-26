@@ -9,7 +9,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
-  z-index: 133;
+  z-index: 2133;
   overflow: auto;
 }
 .returnPolicy h1 {
@@ -26,6 +26,13 @@
   border-radius: 20px;
   transform: scale(0.5);
   transition: 0.4s all;
+}
+@media screen and (max-device-width: 500px) {
+  .returnBlock {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
 }
 
 .show {

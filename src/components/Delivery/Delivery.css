@@ -3,120 +3,107 @@
   padding: 0 20px 0 20px;
   margin: 20px 0;
 }
-#delivery #deliveryDate {
-  font-size: 28px;
-  font-weight: 400;
-}
-#delivery #deliveryDate span {
-  font-size: 16px;
-  font-weight: 400;
-}
-#delivery #deliverySchema {
+#delivery .dateContainer {
   display: flex;
-  margin: 20px 0;
+  align-items: center;
 }
-#delivery #deliverySchema .line {
-  width: 100%;
-  padding: 0 10px;
+#delivery .dateContainer .devLogo {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
 }
-#delivery #deliverySchema .line .fg {
-  height: 50%;
-  border-bottom: 2px solid black;
+#delivery .dateContainer p {
+  color: #535353;
+  font-weight: 300;
 }
-#delivery #deliveryInfo {
-  display: flex;
-  font-size: 16px;
+#delivery .dateContainer p span {
+  font-weight: 500;
+  color: black;
 }
-#delivery #deliveryInfo #leftInfo {
-  text-align: left;
-  font-size: 16px;
-  width: 33.33%;
-}
-#delivery #deliveryInfo #middleInfo {
+#delivery h1 {
   text-align: center;
-  font-size: 16px;
-  width: 33.33%;
+  padding: 20px 0 0 0;
 }
-#delivery #deliveryInfo #rightInfo {
-  text-align: right;
-  font-size: 16px;
-  width: 33.33%;
+#delivery .volcano {
+  color: black;
+  font-weight: 300;
 }
-#delivery .Details {
+#delivery .volcano span {
+  font-weight: 500;
+  color: black;
+}
+
+.boxInfo {
   margin: 10px 0 0 0;
-  text-align: left;
-  background: #faf8ff;
-  padding: 15px;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-}
-@media screen and (max-device-width: 1800px) and (min-device-width: 500px) {
-  #delivery .Details {
-    display: none;
-  }
-}
-#delivery .Details #rating {
-  width: 15%;
-  justify-content: right;
-  margin: 0 10px 0 auto;
-}
-@media screen and (max-device-width: 500px) {
-  #delivery .Details #rating {
-    width: 20%;
-  }
-}
-#delivery .Details #plusForRating {
-  margin: 8px 10px 0 10px;
-  width: 10px;
-  height: 10px;
-}
-#delivery .Details img {
-  width: 20px;
-  height: 20px;
-}
-#delivery .Details h4 {
-  margin-left: 10px;
-}
-#delivery .Details #plus {
-  display: block;
-  margin: 8px 10px 0 auto;
-  width: 10px;
-  height: 10px;
-}
-#delivery .Details #plus:hover {
   cursor: pointer;
+  border-top: 0.1rem solid rgba(46, 42, 57, 0.2);
+  padding: 10px 0 0 0;
 }
-#delivery #shippingDetails {
+.boxInfo .boxFlex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.boxInfo .boxFlex h2 {
+  font-size: 18px;
+}
+.boxInfo .boxFlex img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+.boxInfo .boxFlex .arrowDown {
+  width: 15px;
+  height: 15px;
+  margin: 0 20px 0 auto;
+}
+.boxInfo .boxFlex .arrowDown2 {
+  width: 15px;
+  height: 15px;
+  margin: 0 20px 0 auto;
+  transform: rotate(180deg);
+}
+.boxInfo h3 {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #535353;
+  font-weight: 600;
+}
+.boxInfo p {
+  color: #535353;
+  padding: 5px 0 0 20px;
+  font-weight: 300;
+}
+.boxInfo p span {
+  font-weight: 600;
+}
+
+.bigPhoto {
   width: 100%;
-  border-top: 1px solid #1e1e1e;
-  border-left: 4px solid #d22e2e;
-  text-align: center;
-  box-sizing: border-box;
-  background: #faf8ff;
-  display: none;
-}
-#delivery #shippingDetails h4 {
-  box-sizing: border-box;
-}
-#delivery #returnsInfo {
-  border-top: 1px solid #1e1e1e;
-  border-left: 4px solid #d22e2e;
-  text-align: center;
-  display: none;
-}
-#delivery #returnsInfo p {
-  padding: 10px;
-  line-height: 1.4;
 }
 
-.devLogo {
-  width: 50px;
-  height: 50px;
+.h2II {
+  color: #535353;
+  font-size: 18px;
 }
 
-.Active {
+.h3II {
+  font-size: 24px;
+  padding: 30px 20px 30px 20px;
+}
+
+.h2scep {
+  padding: 20px 0;
+}
+
+.boxMGM {
+  margin: 30px 0 0 0;
+}
+
+.smallIMG {
   display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /*# sourceMappingURL=Delivery.css.map */

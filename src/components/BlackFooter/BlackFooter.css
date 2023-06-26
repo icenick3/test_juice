@@ -1,7 +1,7 @@
 #blackFooter {
   color: white;
-  background: #045e42;
-  padding: 50px 0;
+  background: #477cdc;
+  padding: 10px 0 100px 0;
 }
 #blackFooter #mainBlackFooter {
   width: 60%;
@@ -21,7 +21,6 @@
   #blackFooter #mainBlackFooter #FEFooter {
     padding: 20px;
     width: 100%;
-    border-bottom: 1px solid grey;
   }
 }
 #blackFooter #mainBlackFooter #SEFooter {
@@ -34,6 +33,7 @@
     width: 100%;
     padding: 20px;
     margin: 0;
+    border-bottom: 1px solid grey;
   }
 }
 #blackFooter #mainBlackFooter #SEFooter li {
@@ -88,6 +88,17 @@
 }
 #blackFooter #mainBlackFooter #TEFooter form button:hover {
   cursor: pointer;
+}
+
+.ARText {
+  padding: 50px 20% 0 20%;
+  opacity: 0.8;
+}
+@media screen and (max-device-width: 500px) {
+  .ARText {
+    font-size: 12px;
+    padding: 10px 20px 20px 20px;
+  }
 }
 
 /*# sourceMappingURL=BlackFooter.css.map */

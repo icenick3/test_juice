@@ -2,139 +2,112 @@
   width: 100%;
   padding: 0 20px 0 20px;
   margin: 20px 0;
-
-  #deliveryDate {
-    font-size: 28px;
-    font-weight: 400;
-
-    span {
-      font-size: 16px;
-      font-weight: 400;
-    }
-  }
-
-  #deliverySchema {
+  .dateContainer{
     display: flex;
-    margin: 20px 0;
-
-    .line {
-      width: 100%;
-      padding: 0 10px;
-
-      .fg {
-        height: 50%;
-        border-bottom: 2px solid black;
+    align-items: center;
+    .devLogo{
+      width: 25px;
+      height: 25px;
+      margin: 0 10px 0 0;
+    }
+    p{
+      color: #535353;
+      font-weight: 300;
+      span{
+        font-weight: 500;
+        color: black;
       }
     }
   }
 
-  #deliveryInfo {
-    display: flex;
-    font-size: 16px;
-
-    #leftInfo {
-      text-align: left;
-      font-size: 16px;
-      width: 33.33%;
-    }
-
-    #middleInfo {
-      text-align: center;
-      font-size: 16px;
-      width: 33.33%;
-    }
-
-    #rightInfo {
-      text-align: right;
-      font-size: 16px;
-      width: 33.33%;
+  h1{
+    text-align: center;
+    padding: 20px 0 0 0 ;
+  }
+  .volcano{
+    color: black;
+    font-weight: 300;
+    span{
+      font-weight: 500;
+      color: black;
     }
   }
 
-  .Details {
-    margin: 10px 0 0 0;
-    text-align: left;
-    background: #faf8ff;
-    padding: 15px;
+}
+
+.boxInfo{
+  margin: 10px 0 0 0;
+  cursor: pointer;
+  border-top: 0.1rem solid rgb(46, 42, 57, 0.2);
+  padding: 10px 0 0 0;
+
+  .boxFlex{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    h2{
+      font-size: 18px;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+      margin: 0 10px 0 0;
+
+    }
+    .arrowDown{
+      width: 15px;
+      height: 15px;
+      margin: 0 20px 0 auto;
+    }
+    .arrowDown2{
+      width: 15px;
+      height: 15px;
+      margin: 0 20px 0 auto;
+      transform: rotate(180deg);
+    }
+  }
+  h3{
+    padding: 10px 20px;
     font-size: 16px;
+    color: #535353;
     font-weight: 600;
-    display: flex;
-    @media screen and (max-device-width: 1800px) and (min-device-width: 500px){
-      display: none;
-    }
-
-    #rating {
-      width: 15%;
-      justify-content: right;
-      margin: 0 10px 0 auto;
-      @media screen and (max-device-width: 500px) {
-        width: 20% ;
-      }
-    }
-
-    #plusForRating {
-      margin: 8px 10px 0 10px;
-      width: 10px;
-      height: 10px;
-
-    }
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-
-    h4 {
-      margin-left: 10px;
-    }
-
-    #plus {
-      display: block;
-      margin: 8px 10px 0 auto;
-      width: 10px;
-      height: 10px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
   }
+  p{
+    color: #535353;
+    padding: 5px 0 0 20px;
+    font-weight: 300;
+    span{
+      font-weight: 600;
 
-  #shippingDetails {
-    width: 100%;
-    border-top: 1px solid #1e1e1e;
-    border-left: 4px solid #d22e2e;
-    text-align: center;
-    box-sizing: border-box;
-    background: #faf8ff;
-    display: none;
-
-    h4 {
-      box-sizing: border-box;
-      //padding: 10px 0;
-    }
-  }
-
-  #returnsInfo {
-    border-top: 1px solid #1e1e1e;
-    border-left: 4px solid #d22e2e;
-    text-align: center;
-    display: none;
-
-    p {
-      padding: 10px;
-      line-height: 1.4;
     }
   }
 }
 
-.devLogo {
-  width: 50px;
-  height: 50px;
+.bigPhoto{
+  width: 100%;
 }
 
-.Active {
+.h2II{
+  color: #535353;
+  font-size: 18px;
+}
+
+.h3II{
+  font-size: 24px;
+  padding: 30px 20px 30px 20px;
+}
+
+.h2scep{
+  padding:  20px 0;
+}
+
+.boxMGM{
+  margin: 30px 0 0 0;
+}
+
+.smallIMG{
   display: block;
+  margin: 0 auto;
+  width: 100%;
 }
-

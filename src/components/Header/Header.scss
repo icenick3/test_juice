@@ -1,44 +1,70 @@
 header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 38px;
   left: 0;
   right: 0;
-  z-index: 20;
-  background: white;
+  z-index: 600;
+  background: #477cdc;
   transition: top 0.1s ease;
+  color: white;
+
+
+  h1 {
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    @media screen and (max-device-width: 500px) {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    margin: 0 10px;
+    cursor: pointer;
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   @media screen and (max-device-width: 500px) {
     width: 100%;
   }
-  #header{
+
+  #header {
     width: 60%;
     display: flex;
     padding: 20px;
     margin: 0 20%;
-    background: white;
+    background:#477cdc;
+    align-items: center;
     box-sizing: border-box;
     @media screen and (max-device-width: 500px) {
       padding: 0;
       width: 100%;
       margin: 0;
+      justify-content: space-between;
     }
+
     #menu {
-      display: flex;
       width: 25%;
       padding: 10px;
       margin: 0 0 0 auto;
       justify-content: left;
       align-items: center;
-
+      display: none;
       @media screen and (max-device-width: 500px) {
-        padding: 0 0 0 25px;
+display: flex;
       }
 
       img {
         justify-content: center;
         width: 25px;
         height: 25px;
+
         &:hover {
           cursor: pointer;
         }
@@ -53,8 +79,9 @@ header {
       @media screen and (max-device-width: 500px) {
         padding: 0 0 0 0;
       }
+
       h1 {
-        color: #045e42;
+        color: #c2a272;
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
         user-select: none;
@@ -62,19 +89,19 @@ header {
         text-align: center;
         @media screen and (max-device-width: 500px) {
           font-size: 20px;
-          padding:  20px 0 20px 0;
+          padding: 20px 0 20px 0;
         }
       }
     }
 
     #ShoppingCart {
       position: relative;
-      width: 25%;
-      padding: 10px;
-      margin: 0 auto 0 0;
+      margin: 0 0 0 10px;
       display: flex;
       justify-content: right;
       align-items: center;
+      cursor: pointer;
+
       @media screen and (max-device-width: 500px) {
         padding: 0 25px 0 0;
       }
@@ -82,8 +109,48 @@ header {
       img {
         width: 25px;
         height: 25px;
+
+        &:hover {
+          width: 30px;
+          height: 30px;
+        }
       }
+    }
+
+  }
+
+  .ShoppingCart {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 0 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+    @media screen and (max-device-width: 500px) {
+      display: none;
+    }
+
+    &:hover {
+      width: 30px;
+      height: 30px;
     }
   }
 
+  .ShoppingCart2 {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

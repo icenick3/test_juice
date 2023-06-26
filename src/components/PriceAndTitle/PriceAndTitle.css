@@ -1,6 +1,11 @@
 #PriceInfo {
   padding: 20px;
 }
+@media screen and (max-device-width: 500px) {
+  #PriceInfo {
+    margin: 20px 0 0 0;
+  }
+}
 #PriceInfo #discountCoupon {
   font-weight: 600;
   padding: 10px 0 5px 0;
@@ -32,20 +37,37 @@
   }
 }
 #PriceInfo h1 {
-  font-size: 30px;
+  font-size: 40px;
+  color: #2e2a39;
+  line-height: 40px;
+  padding: 0 0 10px 10px;
+}
+@media screen and (max-device-width: 500px) {
+  #PriceInfo h1 {
+    font-size: 25px;
+  }
 }
 #PriceInfo #stars {
-  margin: 20px 0;
+  margin: 20px 0px 20px 10px;
+  color: #535353;
 }
 #PriceInfo #stars #rait {
   margin: -6px 0;
 }
 #PriceInfo p #discount {
-  color: #d22e2e;
+  color: black;
+}
+#PriceInfo p .vente {
+  color: white;
+  background-color: #89b4ea;
+  border-radius: 15px;
+  padding: 3px 10px;
+  margin: 0 0 0 10px;
+  font-size: 12px;
 }
 #PriceInfo p #price {
   padding-left: 10px;
-  color: #a7a7a7;
+  color: gray;
   text-decoration: line-through;
 }
 #PriceInfo h3 {
@@ -60,7 +82,7 @@
   background-image: none;
   padding: 10px;
   border-radius: 10px;
-  background: #d5ede6;
+  background: #c6dcf7;
   border: none;
   color: inherit;
   caret-color: inherit;
@@ -74,7 +96,7 @@
   }
 }
 #PriceInfo select:hover {
-  outline: 4px solid #045e42;
+  outline: 4px solid #477cdc;
   cursor: pointer;
 }
 #PriceInfo #visitors {
@@ -93,7 +115,7 @@
   border-radius: 10px;
 }
 #PriceInfo #buttonAddToCart {
-  background: #045e42;
+  background: #477cdc;
   color: white;
   text-decoration: none;
   width: 100%;
@@ -102,7 +124,8 @@
   font-size: 16px;
   display: flex;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 400;
+  margin: 10px 0 0 0;
 }
 #PriceInfo #buttonAddToCart:hover {
   cursor: pointer;
@@ -149,7 +172,7 @@
   text-decoration: none;
 }
 #items-count #progressBar {
-  background: #045e42;
+  background: #c2a272;
   height: 11px;
   float: left;
   border-radius: 30px;
@@ -161,13 +184,13 @@
   justify-content: center;
   margin: 20px auto;
   align-items: center;
-  color: #045e42;
+  color: #c2a272;
   font-size: 30px;
 }
 #timerBlock div {
   position: relative;
   color: white;
-  background-color: #045e42;
+  background-color: #c2a272;
   float: left;
   text-align: center;
   font-weight: 700;
@@ -185,7 +208,20 @@
 #h4Text {
   text-align: center;
   font-size: 15px;
-  color: #045e42;
+  color: #c2a272;
+}
+
+.Taxes {
+  font-size: 12px;
+  padding: 0 0 0 10px;
+  color: #535353;
+}
+
+.textUnder {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.5;
+  padding: 10px 0 0 0;
 }
 
 /*# sourceMappingURL=PriceAndTitle.css.map */

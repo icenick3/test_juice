@@ -1,11 +1,12 @@
 #photoContainer {
   position: static;
-  width: 100%;
+  width: 50%;
   margin: 30px auto;
 }
 @media screen and (max-device-width: 500px) {
   #photoContainer {
     margin: 0;
+    width: 100%;
   }
 }
 #photoContainer #position {
@@ -21,6 +22,7 @@
   display: flex;
   position: relative;
   left: 0;
+  align-items: center;
 }
 #photoContainer #position #mainPhotoContainer #photoBlock:hover {
   cursor: grab;
@@ -29,6 +31,29 @@
   width: 100%;
   padding: 20px;
   border-radius: 50px;
+  height: 600px;
+}
+@media screen and (max-device-width: 500px) {
+  #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
+    height: 370px;
+  }
+}
+@media screen and (min-device-width: 2000px) {
+  #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto {
+    height: 800px;
+  }
+}
+#photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto2 {
+  width: 80%;
+  padding: 20px;
+  border-radius: 50px;
+  display: block;
+  margin: 0 50px;
+}
+@media screen and (max-device-width: 500px) {
+  #photoContainer #position #mainPhotoContainer #photoBlock .mainPhoto2 {
+    margin: 0 35px;
+  }
 }
 #photoContainer #position #photos {
   display: flex;
@@ -36,6 +61,7 @@
   margin: 0 auto;
   justify-content: center;
   padding: 0 20px;
+  align-items: center;
 }
 @media screen and (max-device-width: 500px) {
   #photoContainer #position #photos {
@@ -58,6 +84,20 @@
 
 .visible {
   opacity: 1;
+}
+
+.sliderBlock {
+  width: 100%;
+  padding: 20px 10px 0 10px;
+}
+.sliderBlock div {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+.sliderBlock div img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=ProductImages.css.map */

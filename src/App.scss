@@ -20,4 +20,135 @@ body::-webkit-scrollbar-track {
        overflow-x: hidden;
     }
 }
+.slick-dots li{
+    background: black;
+    border-radius: 100%;
+    list-style-type: none;
+    list-style: none;
+    opacity: 0.15;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
 
+}
+
+.slick-arrow {
+    background: none;
+    z-index: 5;
+    top: 30%;
+}
+
+.slick-prev{
+    left: 0px;
+    z-index: 5;
+}
+
+.slick-next{
+    z-index: 5;
+    right: 20px;
+}
+
+
+.slick-dots li{
+    background: black;
+    border-radius: 100%;
+    list-style-type: none;
+    list-style: none;
+    opacity: 0.15;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+
+}
+
+.slick-arrow {
+    background: none;
+    z-index: 5;
+    top: 30%;
+}
+
+.slick-prev{
+    left: 0px;
+    z-index: 5;
+}
+
+.slick-next{
+    z-index: 5;
+    right: 20px;
+}
+
+.slick-prev:before,
+.slick-next:before{
+    opacity: 0;
+    content: '';
+
+}
+.slick-dots li {
+    width: 15px;
+    height: 15px;
+}
+.slick-dots .slick-active{
+    width: 15px;
+    height: 15px;
+    background: #262626;
+    position: relative;
+    z-index: 33;
+    border-radius: 100%;
+    opacity: 1;
+
+}
+
+.slick-dots  {
+    color: #262626;
+}
+.slick-dots li button:focus:before {
+    opacity: 0.15;
+
+}
+.slick-dots li.slick-active button:before {
+    opacity: 0;
+}
+.slick-dots li{
+    width: 15px;
+    height: 15px;
+}
+
+.slick-slider .slick-dots li{
+    width: 15px;
+    height: 15px;
+}
+
+.slick-slider .slick-arrow{
+    opacity: 1;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+#cusPrev {
+    background-image: url("https://i.pinimg.com/originals/ab/25/be/ab25bebbf49973487ef2e2cb07d0c2b4.png");
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 50%;
+    opacity: 0.3;
+}
+
+#cusNext {
+    background-image: url("https://i.pinimg.com/originals/40/ab/4a/40ab4a67d00b9b5b01115d2909f6887b.png");
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    top: 50%;
+    height: 100px;
+    right: 0px;
+    opacity: 0.3;
+}
+
+body{
+    overflow-x: hidden;
+}
