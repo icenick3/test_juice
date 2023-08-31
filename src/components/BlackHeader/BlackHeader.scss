@@ -1,6 +1,6 @@
 .BlackHeader {
-  background: #89b4ea;
-  color: black;
+  background: black;
+  color: white;
   height: 38px;
   width: 100%;
   text-align: center;
@@ -8,7 +8,10 @@
   align-items: center;
   position: relative;
   z-index: 22;
-
+  @media screen and (max-device-width: 500px) {
+    font-size: 14px;
+    height: 48px;
+  }
 
   .text-change {
     display: block;
@@ -17,6 +20,7 @@
     margin: 0 auto;
     @media screen and (max-device-width: 500px) {
       font-size: 14px;
+      padding: 10px 0;
     }
   }
 }

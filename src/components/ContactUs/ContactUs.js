@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import './ContactUs.css'
+import {useTranslation} from "react-i18next";
 
 const ContactUs = ({setContactUs}) => {
 
     const [active, setActive] = useState(false)
 
+    const { t } = useTranslation()
     const onsubmit = (e) => {
         e.preventDefault()
         setActive(true)
@@ -20,20 +22,20 @@ const ContactUs = ({setContactUs}) => {
                 <img className="closeGuide"
                      src="https://i.pinimg.com/originals/52/e3/86/52e38681b082f94f2917624bb56edf42.png" alt=""
                      onClick={() => setContactUs(false)}/>
-                <h1>Contact</h1>
+                <h1>{t("Contact")}</h1>
                 {active && <p>
-                    Thanks for contacting us. We'll get back to you as soon as possible.
+                    {t("Thanks")}
                 </p>}
                 <form onSubmit={onsubmit}>
                     <div>
-                        <input type="text" placeholder="Name"/>
-                        <input type="email" placeholder="Email"/>
+                        <input type="text" placeholder={t("Name")}/>
+                        <input type="email" placeholder={t("Email")}/>
                     </div>
-                    <input className="phone" type="text" placeholder="Phone"/>
-                    <textarea  cols="30" rows="10" placeholder="Message">
+                    <input className="phone" type="text" placeholder={t("Phone")}/>
+                    <textarea  cols="30" rows="10" placeholder={t("Message")}>
 
                 </textarea>
-                    <button>Send</button>
+                    <button>{t("Send")}</button>
                 </form>
             </div>
         </div>

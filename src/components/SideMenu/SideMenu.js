@@ -1,8 +1,10 @@
 import React, {useEffect, useRef} from 'react';
 import './SideMenu.css'
+import {useTranslation} from "react-i18next";
 
 const SideMenu = ({activeSideMenu, setActiveSideMenu, setReturn, setShiping ,setAbout, setContactUs, setFAQ}) => {
 
+    const { t } = useTranslation()
 
     const sideRef = useRef()
 
@@ -28,23 +30,23 @@ const SideMenu = ({activeSideMenu, setActiveSideMenu, setReturn, setShiping ,set
                 <p onClick={()=> {
                     setAbout(true)
                     setActiveSideMenu(false)
-                }}>Privacy Policy</p>
+                }}>{t("PPolicy")}</p>
                 <p onClick={()=> {
                     setContactUs(true)
                     setActiveSideMenu(false)
-                }}>Contact Us</p>
+                }}>{t("ContactUS")}</p>
                 <p onClick={()=> {
                     setFAQ(true)
                     setActiveSideMenu(false)
-                }}>Terms of Service</p>
+                }}>{t("TermsOfService")}</p>
                 <p onClick={()=> {
                     setReturn(true)
                     setActiveSideMenu(false)
-                }}>Return policy</p>
+                }}>{t("RPolicy")}</p>
                 <ul>
-                    <li>support@sound.scape</li>
-                    <li>49 Dalberg Rd, London SW2 1AJ, Great Britain</li>
-                    <li>Cell: +447909777249</li>
+                    <li>{t("FooterText1")}</li>
+                    <li>{t("FooterText2")}</li>
+                    <li>{t("FooterText3")}</li>
                 </ul>
             </div>
         </div>

@@ -1,13 +1,15 @@
 import React from 'react';
 import {comments, comments2, comments3} from "./commentsArray";
 import './Comments.css'
+import {useTranslation} from "react-i18next";
 
 const Comments = () => {
 
+    const { t } = useTranslation()
 
     return (
         <div className="comBlock">
-            <h1 className="revo">Our Customer Reviews</h1>
+            <h1 className="revo">{t("Reviews")}</h1>
                 {/*<div  id="stars2"><img id="rait" src="https://loveriq.online/sweep/za1/raiting.png" alt=""/>8 Reviews</div>*/}
             <div  id="comments">
                 <div className="commentsContainer">

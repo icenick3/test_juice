@@ -1,13 +1,18 @@
 header {
   width: 100vw;
-  position: fixed;
   top: 38px;
   left: 0;
   right: 0;
   z-index: 600;
-  background: #477cdc;
   transition: top 0.1s ease;
   color: white;
+  margin-bottom: 40px;
+}
+@media screen and (max-device-width: 500px) {
+  header {
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
 }
 header h1 {
   margin: 0 20px 0 0;
@@ -16,6 +21,7 @@ header h1 {
 @media screen and (max-device-width: 500px) {
   header h1 {
     font-size: 30px;
+    margin-bottom: 0;
   }
 }
 header p {
@@ -40,7 +46,6 @@ header #header {
   display: flex;
   padding: 20px;
   margin: 0 20%;
-  background: #477cdc;
   align-items: center;
   box-sizing: border-box;
 }
@@ -63,6 +68,9 @@ header #header #menu {
 @media screen and (max-device-width: 500px) {
   header #header #menu {
     display: flex;
+    justify-content: end;
+    width: 15%;
+    padding-right: 30px;
   }
 }
 header #header #menu img {
@@ -108,15 +116,21 @@ header #header #ShoppingCart {
 @media screen and (max-device-width: 500px) {
   header #header #ShoppingCart {
     padding: 0 25px 0 0;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 header #header #ShoppingCart img {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
-header #header #ShoppingCart img:hover {
-  width: 30px;
-  height: 30px;
+@media screen and (max-device-width: 500px) {
+  header #header #ShoppingCart img {
+    width: 25px;
+    height: 25px;
+  }
 }
 header .ShoppingCart {
   position: relative;
@@ -133,10 +147,6 @@ header .ShoppingCart {
     display: none;
   }
 }
-header .ShoppingCart:hover {
-  width: 30px;
-  height: 30px;
-}
 header .ShoppingCart2 {
   position: relative;
   width: 25px;
@@ -150,6 +160,40 @@ header .ShoppingCart2 {
 header .ShoppingCart2:hover {
   width: 30px;
   height: 30px;
+}
+
+.logotype {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+}
+@media screen and (max-device-width: 500px) {
+  .logotype {
+    width: 50%;
+  }
+}
+
+.links {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+}
+@media screen and (max-device-width: 500px) {
+  .links {
+    display: none;
+  }
+}
+.links a {
+  margin: 0 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.links a:first-child {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=Header.css.map */

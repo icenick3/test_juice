@@ -1,10 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import './botPopup.css'
+import {useTranslation} from "react-i18next";
 
 
 
 const BotPopup = ({setPopActive, price, setColor2, color2, setCount, setSrc, setShowCart, setShowCartFirst}) => {
 
+    const { t } = useTranslation()
     const popRef = useRef()
 
     useEffect(() => {
@@ -36,19 +38,19 @@ const BotPopup = ({setPopActive, price, setColor2, color2, setCount, setSrc, set
 
     const onChange = (e) => {
         setColor2(e.target.value)
-        if (e.target.value === 'Ice Blue'){
+        if (e.target.value === 'Black'){
             setCount(0)
             setSrc(document.getElementById("buttonOfferBlue").href)
-        } else if (e.target.value === 'Modern Grey'){
+        } else if (e.target.value === 'Green'){
             setCount(2)
             setSrc(document.getElementById("buttonOfferGrey").href)
-        } else if (e.target.value === 'Pink Lotus'){
+        } else if (e.target.value === 'Blue'){
             setCount(1)
             setSrc(document.getElementById("buttonOfferPink").href)
-        } else if (e.target.value === 'Sapphire Blue'){
+        } else if (e.target.value === 'White'){
             setCount(3)
             setSrc(document.getElementById("buttonOfferPurple").href)
-        } else if (e.target.value === 'Youth Green'){
+        } else if (e.target.value === 'Red'){
             setCount(4)
             setSrc(document.getElementById("buttonOfferGreen").href)
         }
@@ -61,30 +63,26 @@ const BotPopup = ({setPopActive, price, setColor2, color2, setCount, setSrc, set
             </div>
             <div id="botPopupMain">
                 <div id="popupContainer">
-                    {color2 === "Ice Blue" && <img src="https://i.pinimg.com/originals/7f/be/94/7fbe94a15ca81d226cdf8a7dcebea36f.jpg" alt=""/>}
-                    {color2 === "Pink Lotus" && <img src="https://i.pinimg.com/originals/54/10/f6/5410f66b73596ed5b9ebaa027d62368d.jpg" alt=""/>}
-                    {color2 === "Modern Grey" && <img src="https://i.pinimg.com/originals/b1/bf/61/b1bf61e7d50048f19441fffe6ebe9828.jpg" alt=""/>}
-                    {color2 === "Sapphire Blue" && <img src="https://i.pinimg.com/originals/b3/c4/46/b3c44681e4e0ea04d0041437de93a69c.jpg" alt=""/>}
-                    {color2 === "Youth Green" && <img src="https://i.pinimg.com/originals/6d/9a/49/6d9a49056cc81a2a6998c2602f209c1f.jpg" alt=""/>}
+                    {color2 === "Black" && <img src="https://i.pinimg.com/originals/7f/c0/af/7fc0af25ab25ac58d61533e870d4305e.jpg" alt=""/>}
+                    {color2 === "Blue" && <img src="https://i.pinimg.com/originals/20/16/06/201606e693505434abfb6a3d65e36f8f.jpg" alt=""/>}
+                    {color2 === "Green" && <img src="https://i.pinimg.com/originals/5d/a2/8e/5da28e6ad7f0fc612eeccb84f4153bea.jpg" alt=""/>}
+                    {color2 === "White" && <img src="https://i.pinimg.com/originals/23/08/a7/2308a766007769018a963d603b43784d.jpg" alt=""/>}
+                    {color2 === "Red" && <img src="https://i.pinimg.com/originals/95/2e/25/952e25fe3f870aa4801222db81f66dc0.jpg" alt=""/>}
                     <div>
-                        <h2>ACEFLOWS™ - CRYSTAL EARBUDS</h2>
-                        <p><span> £ 34,99</span> £ 6,99</p>
+                        <h2>{t("ProductTitle")}</h2>
+                        <p><span> $ 70.22</span> $ 50,99</p>
                     </div>
                 </div>
                 <div id="botPopupSelect">
                     <select name="select" id="select" onChange={onChange}>
-                        <option value="Ice Blue">Ice Blue</option>
-                        <option value="Pink Lotus">Pink Lotus</option>
-                        <option value="Modern Grey">Modern Grey</option>
-                        <option value="Sapphire Blue">Sapphire Blue</option>
-                        <option value="Youth Green">Youth Green</option>
+                        <option value="Black">{t("Blue")}</option>
+                        <option value="Blue">{t("Pink")}</option>
+                        <option value="Green">{t("Grey")}</option>
+                        <option value="White">{t("Purple")}</option>
+                        <option value="Red">{t("Green")}</option>
                     </select>
-                    <a  onClick={()=>{
-                       setShowCart(true)
-                        setShowCartFirst(false)
-                    }}
-                    id="btn" >
-                        Buy now
+                    <a href={document.querySelector("#buttonOffer").href}  id="btn">
+                        {t("BuyNow")}
                     </a>
                 </div>
             </div>

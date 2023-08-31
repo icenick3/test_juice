@@ -1,0 +1,75 @@
+.emailForm {
+  color: white;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  .manager{
+    opacity: 1;
+  }
+
+  h1 {
+    font-size: 44px;
+    padding: 50px 0 20px 0;
+    @media screen and (max-device-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    font-size: 17px;
+    opacity: 0.7;
+    @media screen and (max-device-width: 500px) {
+      font-size: 16px;
+      padding: 0 30px;
+    }
+  }
+
+  div {
+    position: relative;
+    cursor: pointer;
+    width: 25%;
+    margin: 0 auto;
+    @media screen and (max-device-width: 500px) {
+      width: 80%;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      position: absolute;
+      right: 15px;
+      top: calc(50% - 13px);
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    input {
+      border-radius: 40px;
+      outline: none;
+      background-color: black;
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      width: 100%;
+      color: white;
+      box-sizing: border-box;
+      @media screen and (max-device-width: 500px) {
+       font-size: 14px;
+      }
+
+      &:hover {
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+    }
+
+    img {
+      width: 26px;
+      height: 26px;
+      opacity: 0.5;
+
+    }
+  }
+}

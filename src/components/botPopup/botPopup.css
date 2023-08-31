@@ -103,9 +103,9 @@
 }
 #botPopup #botPopupSelect select {
   font-size: 18px;
-  width: fit-content;
+  width: 150px;
   outline: none;
-  background: #c6dcf7;
+  background: white;
   border: none;
   padding: 15px;
   border-radius: 15px;
@@ -118,6 +118,7 @@
   caret-color: inherit;
   box-sizing: border-box;
   transition: outline 0.1s ease-in-out;
+  border: 1px solid black;
 }
 @media screen and (max-device-width: 500px) {
   #botPopup #botPopupSelect select {
@@ -134,7 +135,7 @@
   font-size: 18px;
   color: white;
   border-radius: 15px;
-  background: #477cdc;
+  background: black;
   padding: 15px 20px;
   margin: 20px;
   font-weight: 400;

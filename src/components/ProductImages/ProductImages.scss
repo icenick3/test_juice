@@ -1,10 +1,9 @@
 #photoContainer {
   position: static;
   width: 50%;
-  margin: 30px auto;
-
+  margin: 0px auto;
   @media screen and (max-device-width: 500px) {
-    margin: 0 ;
+    margin: 0;
     width: 100%;
   }
 
@@ -25,6 +24,7 @@
         left: 0;
         align-items: center;
 
+
         &:hover {
           cursor: grab;
         }
@@ -39,12 +39,13 @@
             height: 800px;
           }
         }
+
         .mainPhoto2 {
           width: 80%;
           padding: 20px;
           border-radius: 50px;
           display: block;
-          margin:  0 50px;
+          margin: 0 50px;
           @media screen and (max-device-width: 500px) {
             margin: 0 35px;
           }
@@ -59,6 +60,7 @@
       justify-content: center;
       padding: 0 20px;
       align-items: center;
+
 
       @media screen and (max-device-width: 500px) {
         width: 90%;
@@ -87,16 +89,23 @@
   opacity: 1;
 }
 
-.sliderBlock{
+.sliderBlock {
   width: 100%;
-  padding:20px 10px 0 10px;
-  div{
+  padding: 20px 10px 0 10px;
+  position: relative;
+  @media screen and (max-device-width: 500px) {
+    padding: 0px 10px 0 10px;
+  }
+
+  div {
     display: flex;
     align-items: center;
-    height: 500px;
-    img{
+
+
+    img {
       display: block;
       width: 100%;
+      border-radius: 20px;
       @media screen and (min-device-width: 2500px) {
         margin: 230px auto 0 auto;
       }
@@ -107,10 +116,101 @@
         margin: 150px auto 0 auto;
       }
       @media screen and (min-device-width: 1610px) {
-        margin: 100px auto 0 auto;
+        margin: 20px auto 0 auto;
       }
     }
   }
 
 }
 
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+
+.addDiv {
+  margin: 40px auto;
+  width: 60%;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+    padding: 0 20px;
+    margin: 10px auto;
+  }
+
+  h1 {
+    padding: 0 0 30px 0;
+  }
+
+  .dodDiv {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 10px 0;
+
+    ul {
+      margin: 10px 0 10px 30px;
+      line-height: 30px;
+      opacity: 0.8;
+    }
+
+    .allBlocks {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .blockImg {
+      width: 50px;
+      height: 40px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+
+  .dodDiv2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    cursor: pointer;
+    .allBlocks {
+      display: flex;
+      align-items: center;
+
+    }
+    .accordion{
+      margin: 20px 0 0 20px;
+      p{
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 35px;
+        opacity: 0.8;
+      }
+    }
+
+    .blockImg {
+      width: 50px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+
+      img {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+}

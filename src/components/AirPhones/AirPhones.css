@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap");
+.airPhones {
+  position: relative;
+  width: 100%;
+  margin: 140px 0;
+}
+@media screen and (max-device-width: 500px) {
+  .airPhones {
+    margin: 0;
+  }
+}
+.airPhones .VolumeImg {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.airPhones .subAir {
+  margin: 0;
+  text-align: center;
+}
+
+.contAir {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media screen and (max-device-width: 500px) {
+  .contAir {
+    width: 100%;
+    display: block;
+  }
+}
+.contAir div {
+  background-color: white;
+  position: relative;
+  z-index: 66;
+  padding: 50px 100px;
+  width: 50%;
+}
+@media screen and (max-device-width: 500px) {
+  .contAir div {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.contAir div h2 {
+  font-size: 45px;
+  font-weight: 500;
+  text-align: start;
+}
+.contAir div p {
+  padding: 40px 0 40px 0;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: start;
+  font-weight: 400;
+  opacity: 0.6;
+}
+@media screen and (max-device-width: 500px) {
+  .contAir div p {
+    padding: 10px 0;
+  }
+}
+.contAir div img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.contAir .rightIMG {
+  width: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .contAir .rightIMG {
+    width: 80%;
+    border-radius: 20px;
+  }
+}
+.contAir .leftIMG {
+  width: 50%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+@media screen and (max-device-width: 500px) {
+  .contAir .leftIMG {
+    width: 80%;
+    border-radius: 20px;
+  }
+}
+
+.secCON {
+  margin: 80px auto;
+}
+@media screen and (max-device-width: 500px) {
+  .secCON {
+    margin: 10px auto;
+  }
+}
+
+/*# sourceMappingURL=AirPhones.css.map */

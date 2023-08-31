@@ -1,10 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import "./Header.css"
+import {useTranslation} from "react-i18next";
 
 
 const Header = ({setActiveSideMenu, setPopActive, setAbout, setFAQ, setContactUs, setReturn, setShiping, setColor2, color2, setShowCart, setShowCartFirst}) => {
 
     const hedRef = useRef()
+    const { t } = useTranslation()
 
     useEffect(() => {
         function handleScroll() {
@@ -22,28 +24,23 @@ const Header = ({setActiveSideMenu, setPopActive, setAbout, setFAQ, setContactUs
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+
     return (
         <header ref={hedRef}>
             <div id="header">
                 <div id="menu" >
-                    <img onClick={()=> setActiveSideMenu(true)} src="https://i.pinimg.com/originals/80/0c/11/800c11ed0bbb24922d88b1984577a95e.png" alt=""/>
+                    <img onClick={()=> setActiveSideMenu(true)} src="https://i.pinimg.com/originals/44/09/dd/4409dd64c767cf6ebf53b865505ba674.png" alt=""/>
                 </div>
-                <h1 onClick={()=> {
-                    setShowCart(false)
-                    setShowCartFirst(true)
-                }}>SoundScape</h1>
-                <p onClick={()=> setAbout(true)}>Privacy Policy</p>
-                <p onClick={()=> setContactUs(true)}>Contact US</p>
-                <p onClick={()=> setFAQ(true)}>Terms of Service</p>
-                <p onClick={()=> setReturn(true)}>Return policy</p>
-                <img className="ShoppingCart2" src="https://i.pinimg.com/originals/a9/b9/88/a9b9888e7cdf7e83fa4c3415c8588083.png" alt=""/>
-                <img className="ShoppingCart" src="https://i.pinimg.com/originals/8b/05/4f/8b054f5f4fd02568643c345c91a439f9.png" alt=""/>
-                <a onClick={()=> {
-                    setShowCart(true)
-                    setShowCartFirst(false)
-                }} id="ShoppingCart">
-                    <img src="https://i.pinimg.com/originals/90/d2/34/90d234329fb070e933194a66f1ef590b.png" alt=""/>
+                <img className="logotype" src="https://i.pinimg.com/originals/8d/c0/21/8dc02197f11a956b346d27ed7f583d94.png" alt=""/>
+                <a id="ShoppingCart" href={document.querySelector("#buttonOffer").href} >
+                    <img src="https://i.pinimg.com/originals/fe/08/b9/fe08b98d4dbeb93a513f60fab0a14d85.png" alt=""/>
                 </a>
+            </div>
+            <div className="links">
+                <a href="">Shop AirBeats™ Wireless </a>
+                <a href="https://parcelsapp.com/en/tracking">Track Your Order</a>
+                <a  onClick={()=> setContactUs(true)}>Contact</a>
             </div>
         </header>
     );

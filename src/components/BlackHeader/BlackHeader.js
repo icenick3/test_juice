@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './BlackHeader.css'
+import {useTranslation} from "react-i18next";
 
 const BlackHeader = () => {
+
+    const { t } = useTranslation()
 
     const [text, setText] = useState(0)
     const sentences = ["VIITOR VIP | Vânzarea se încheie în 8 ore!", "Livrare gratuită în toată lumea | Retur gratuit în 30 de zile"];
@@ -15,7 +18,7 @@ const BlackHeader = () => {
     return (
         <div className="BlackHeader">
             <h1 className='text-change'>
-                Free Shipping on All Orders in Europe!
+                {t("BlackHeader")}
             </h1>
         </div>
     );

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
+
+.airPhones {
+  position: relative;
+  width: 100%;
+  margin: 140px 0;
+  @media screen and (max-device-width: 500px) {
+    margin: 0 ;
+  }
+
+  .VolumeImg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .subAir {
+
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.contAir {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @media screen and (max-device-width: 500px) {
+    width: 100%;
+    display: block;
+  }
+
+  div {
+    background-color: white;
+    position: relative;
+    z-index: 66;
+    padding: 50px 100px;
+    width: 50%;
+    @media screen and (max-device-width: 500px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+
+    h2 {
+      font-size: 45px;
+      font-weight: 500;
+      text-align: start;
+    }
+    p {
+      padding: 40px 0 40px 0;
+      font-size: 17px;
+      line-height: 30px;
+      text-align: start;
+      font-weight: 400;
+      opacity: 0.6;
+      @media screen and (max-device-width: 500px) {
+        padding: 10px 0;
+      }
+    }
+
+    img {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .rightIMG {
+    width: 50%;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    @media screen and (max-device-width: 500px) {
+      width: 80%;
+      border-radius: 20px;
+    }
+  }
+
+  .leftIMG {
+    width: 50%;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px ;
+    @media screen and (max-device-width: 500px) {
+      width: 80%;
+      border-radius: 20px;
+    }
+
+  }
+}
+
+.secCON {
+  margin: 80px auto;
+  @media screen and (max-device-width: 500px) {
+    margin: 10px auto;
+  }
+}

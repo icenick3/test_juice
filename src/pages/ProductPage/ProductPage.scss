@@ -2,12 +2,10 @@
   width: 60%;
   margin: 0 auto 0 auto;
   position: relative;
-  top: 98px;
   display: flex;
   @media screen and (max-device-width: 500px) {
     width: 100%;
     display: block;
-    top: 40px;
   }
 
 }
@@ -22,7 +20,7 @@
 }
 
 #blackFooterContainer{
-  margin-bottom: 0x;
+  margin-bottom: 0;
   @media screen and (max-device-width: 500px) {
     margin-bottom: 0px;
   }

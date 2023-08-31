@@ -68,7 +68,7 @@
 
     .vente {
       color: white;
-      background-color: #89b4ea;
+      background-color: black;
       border-radius: 15px;
       padding: 3px 10px;
       margin: 0 0 0 10px;
@@ -95,21 +95,20 @@
     background-image: none;
     padding: 10px;
     border-radius: 10px;
-    background: #c6dcf7;
+    background: white;
     border: none;
     color: inherit;
     caret-color: inherit;
+    color: black;
     box-sizing: border-box;
     outline: none;
     transition: outline 0.1s ease-in-out;
+    border: 1px solid black;
+    cursor: pointer;
     @media screen and (max-device-width: 500px) {
       padding: 15px;
     }
 
-    &:hover {
-      outline: 4px solid #477cdc;
-      cursor: pointer;
-    }
   }
 
   #visitors {
@@ -130,7 +129,7 @@
   }
 
   #buttonAddToCart {
-    background: #477cdc;
+    background: black;
     color: white;
     text-decoration: none;
     width: 100%;
@@ -262,5 +261,14 @@
   font-size: 12px;
   opacity: 0.5;
   padding: 10px 0 0 0 ;
+}
+
+
+
+.ulPo{
+  width: 90%;
+  margin: 30px auto;
+  font-size: 18px;
+  opacity: 0.8;
 }
 

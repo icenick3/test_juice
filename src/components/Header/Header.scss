@@ -1,20 +1,23 @@
 header {
   width: 100vw;
-  position: fixed;
   top: 38px;
   left: 0;
   right: 0;
   z-index: 600;
-  background: #477cdc;
   transition: top 0.1s ease;
   color: white;
-
+  margin-bottom: 40px;
+  @media screen and (max-device-width: 500px) {
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
 
   h1 {
     margin: 0 20px 0 0;
     cursor: pointer;
     @media screen and (max-device-width: 500px) {
       font-size: 30px;
+      margin-bottom: 0;
     }
   }
 
@@ -39,7 +42,6 @@ header {
     display: flex;
     padding: 20px;
     margin: 0 20%;
-    background:#477cdc;
     align-items: center;
     box-sizing: border-box;
     @media screen and (max-device-width: 500px) {
@@ -57,7 +59,10 @@ header {
       align-items: center;
       display: none;
       @media screen and (max-device-width: 500px) {
-display: flex;
+        display: flex;
+        justify-content: end;
+        width: 15%;
+        padding-right: 30px;
       }
 
       img {
@@ -101,19 +106,22 @@ display: flex;
       justify-content: right;
       align-items: center;
       cursor: pointer;
-
       @media screen and (max-device-width: 500px) {
         padding: 0 25px 0 0;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       img {
-        width: 25px;
-        height: 25px;
-
-        &:hover {
-          width: 30px;
-          height: 30px;
+        width: 35px;
+        height: 35px;
+        @media screen and (max-device-width: 500px) {
+          width: 25px;
+          height: 25px;
         }
+
       }
     }
 
@@ -132,10 +140,7 @@ display: flex;
       display: none;
     }
 
-    &:hover {
-      width: 30px;
-      height: 30px;
-    }
+
   }
 
   .ShoppingCart2 {
@@ -152,5 +157,38 @@ display: flex;
       width: 30px;
       height: 30px;
     }
+  }
+}
+
+.logotype {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  @media screen and (max-device-width: 500px) {
+    width: 50%;
+  }
+}
+
+.links {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  @media screen and (max-device-width: 500px) {
+    display: none;
+  }
+
+  a {
+    margin: 0 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a:first-child {
+    text-decoration: underline;
   }
 }

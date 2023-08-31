@@ -1,185 +1,71 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './PriceAndTitle.css'
+import {useTranslation} from "react-i18next";
 
 
 const PriceAndTitle = ({setPopActive, setprice, setCount, color2, setColor2, setSrc, setShowCartFirst, setShowCart}) => {
-    const [visitor, setVisitors] = useState(196)
-    const [items, setItems] = useState(13)
-    const [color, setColor] = useState("White")
-    const [active, setActive] = useState(false)
-    const [text, setText] = useState("")
-    const localItems = localStorage.getItem('items') ? localStorage.getItem('items') : null
 
-    const barRef = useRef()
-    const spanRef = useRef()
+    const { t } = useTranslation()
 
 
-    // const localHours = localStorage.getItem('hours') ? localStorage.getItem('hours') : null
-    // const localMinutes = localStorage.getItem('minutes') ? localStorage.getItem('minutes') : null
-    // const localSeconds = localStorage.getItem('seconds') ? localStorage.getItem('seconds') : null
-    // const [hours, setHours] = useState(localHours ? localHours : 11);
-    // const [minutes, setMinutes] = useState(localMinutes ? localMinutes : 9);
-    // const [seconds, setSeconds] = useState(localSeconds ? localSeconds : 11);
-
-    // useEffect(() => {
-    //     const timer = setInterval(() => {
-    //         if (!localSeconds){
-    //             if (seconds > 0) {
-    //                 setSeconds(seconds - 1);
-    //                 localStorage.setItem('seconds', seconds)
-    //             } else {
-    //                 if (minutes > 0) {
-    //                     setMinutes(minutes - 1);
-    //                     localStorage.setItem('minutes',minutes - 1)
-    //                     setSeconds(59);
-    //                     localStorage.setItem('seconds', 59)
-    //                 } else {
-    //                     if (hours > 0) {
-    //                         setHours(hours - 1);
-    //                         localStorage.setItem('hours', hours - 1)
-    //                         setMinutes(59);
-    //                         localStorage.setItem('minutes', 59)
-    //                         setSeconds(59);
-    //                         localStorage.setItem('seconds', 59)
-    //                     } else {
-    //                         // Таймер закінчився
-    //                         clearInterval(timer);
-    //                     }
-    //                 }
-    //             }
-    //         } else {
-    //             if (localSeconds > 0) {
-    //                 setSeconds(seconds - 1);
-    //                 localStorage.setItem('seconds', seconds)
-    //             } else {
-    //                 if (minutes > 0) {
-    //                     setMinutes(minutes - 1);
-    //                     localStorage.setItem('minutes',minutes - 1)
-    //                     setSeconds(59);
-    //                     localStorage.setItem('seconds', 59)
-    //                 } else {
-    //                     if (hours > 0) {
-    //                         setHours(hours - 1);
-    //                         localStorage.setItem('hours', hours - 1)
-    //                         setMinutes(59);
-    //                         localStorage.setItem('minutes', 59)
-    //                         setSeconds(59);
-    //                         localStorage.setItem('seconds', 59)
-    //                     } else {
-    //                         // Таймер закінчився
-    //                         clearInterval(timer);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //
-    //     }, 1000);
-    //
-    //     return () => {
-    //         clearInterval(timer);
-    //     };
-    // }, [hours, minutes, seconds]);
-
-
-    // useEffect(() => {
-    //     if(!localItems){
-    //         (async () => {
-    //             const addItem = (time, i) => {
-    //                 return new Promise(resolve =>
-    //                     setTimeout(() => {
-    //                         setItems(i);
-    //                         localStorage.setItem('items', i)
-    //                         resolve(); // Додаємо виклик resolve для завершення промісу
-    //                     }, time)
-    //                 );
-    //             };
-    //             await addItem(19000, 12);
-    //             await addItem(16000, 11);
-    //             await addItem(13000, 10);
-    //             await addItem(13000, 9);
-    //         })();
-    //     } else {
-    //         setItems(localItems)
-    //     }
-    // }, []);
-
-
-    // useEffect(()=>{
-    //
-    //     if (items < 10){
-    //         barRef.current.style = `width: ${items}%; background: red`
-    //         spanRef.current.style = 'color: red'
-    //
-    //     } else {
-    //         barRef.current.style = `width: ${items}%`
-    //     }
-    //
-    // }, [items])
-
-    function generateRandomNumber() {
-        const min = 192;
-        const max = 198;
-        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        setVisitors(randomNumber)
-    }
-
-    useEffect(() => {
-        setTimeout(() => {
-            generateRandomNumber()
-        }, 8000)
-    }, [visitor])
     const onChange = (e) => {
         setColor2(e.target.value)
-        if (e.target.value === 'Ice Blue'){
+        if (e.target.value === 'Black'){
             setCount(0)
-            setSrc(document.getElementById("buttonOfferBlue").href)
-        } else if (e.target.value === 'Modern Grey'){
+        } else if (e.target.value === 'Green'){
             setCount(2)
-            setSrc(document.getElementById("buttonOfferGrey").href)
-        } else if (e.target.value === 'Pink Lotus'){
+        } else if (e.target.value === 'Blue'){
             setCount(1)
-            setSrc(document.getElementById("buttonOfferPink").href)
-        } else if (e.target.value === 'Sapphire Blue'){
+        } else if (e.target.value === 'White'){
             setCount(3)
-            setSrc(document.getElementById("buttonOfferPurple").href)
-        } else if (e.target.value === 'Youth Green'){
+        } else if (e.target.value === 'Red'){
             setCount(4)
-            setSrc(document.getElementById("buttonOfferGreen").href)
         }
     }
 
 
     return (
         <div id="PriceInfo">
-            <h1>ACEFLOWS™ - CRYSTAL EARBUDS</h1>
-            <p><span id="price" >£ 34,99</span><span id="discount"> £ 6,99 </span><span className="vente">Sale</span></p>
-            <p className="Taxes">incluses VAT</p>
+            <h1>{t("ProductTitle")}</h1>
+            <p><span id="price" >$ 70.22</span><span id="discount"> $ 50,99 </span><span className="vente">{t("Sale")}</span></p>
+            <p className="Taxes">{t("VAT")}</p>
             <div id="stars"><img id="rait" src="https://loveriq.online/sweep/za1/raiting.png" alt=""/>(9)</div>
-            {/*<p id="discountCoupon" >Discount coupon</p>*/}
-            {/*<form onSubmit={onsubmit}>*/}
-            {/*    <div className="discountInput">*/}
-            {/*        <input type="text" onChange={(e)=> setText(e.target.value)}/>*/}
-            {/*        {active && <p id="discountProcent">95% discount coupon has been activated</p>}*/}
-            {/*        <button> Apply</button>*/}
-            {/*    </div>*/}
-            {/*</form>*/}
-
             <h3>Color: {color2}</h3>
             <select name="select" id="select" onChange={onChange}>
-                <option value="Ice Blue">Ice Blue</option>
-                <option value="Pink Lotus">Pink Lotus</option>
-                <option value="Modern Grey">Modern Grey</option>
-                <option value="Sapphire Blue">Sapphire Blue</option>
-                <option value="Youth Green">Youth Green</option>
+                <option value="Black">{t("Blue")}</option>
+                <option value="Blue">{t("Pink")}</option>
+                <option value="Green">{t("Grey")}</option>
+                <option value="White">{t("Purple")}</option>
+                <option value="Red">{t("Green")}</option>
             </select>
             {/*<p className="textUnder">Take part in our contest and get a chance to get the prize by clicking on the button below</p>*/}
-            <a onClick={()=> {
-                setShowCart(true)
-                setShowCartFirst(false)
-            }
-            } id="buttonAddToCart" >
-                Buy now
+            <a id="buttonAddToCart" href={document.querySelector("#buttonOffer").href}>
+                {t("BuyNow")}
             </a>
+            <div className="product__description">
+                <ul data-mce-fragment="1" className="ulPo">
+                    <li data-mce-fragment="1">
+                        <strong>Superior sound quality:</strong> Enjoy crisp, clear audio with rich bass and full-bodied
+                        tones.
+                    </li>
+                    <li data-mce-fragment="1">
+                        <strong>Wireless connectivity:</strong> Connect seamlessly to your Apple Air MAS device for a
+                        wireless listening experience.
+                    </li>
+                    <li data-mce-fragment="1">
+                        <strong>Comfortable fit:</strong> Ergonomically designed to provide a secure and comfortable fit
+                        for extended periods of wear.
+                    </li>
+                    <li data-mce-fragment="1">
+                        <strong>Long battery life:</strong> With up to 8 hours of playback time and quick charging, you
+                        can enjoy your music all day long.
+                    </li>
+                    <li data-mce-fragment="1">
+                        <strong>Built-in microphone:</strong> Take calls hands-free with the built-in microphone, and
+                        enjoy clear conversations with noise reduction technology.
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 };

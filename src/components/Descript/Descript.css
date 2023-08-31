@@ -1,0 +1,52 @@
+#descript {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 50px auto;
+}
+@media screen and (max-device-width: 1700px) {
+  #descript {
+    display: block;
+  }
+}
+#descript #line {
+  width: 30px;
+  border-top: 1px solid #C0C0C0;
+}
+@media screen and (max-device-width: 1700px) {
+  #descript #line {
+    border-left: 1px solid #C0C0C0;
+    height: 30px;
+    border-top: none;
+    margin-left: 50%;
+  }
+}
+#descript .desBlock {
+  display: flex;
+  border: 1px solid #C0C0C0;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  width: 33.33%;
+}
+@media screen and (max-device-width: 1700px) {
+  #descript .desBlock {
+    width: 100%;
+  }
+}
+#descript .desBlock img {
+  width: 160px;
+  height: 172px;
+}
+#descript .desBlock div h2 {
+  font-size: 17px;
+  font-family: "League Gothic", sans-serif;
+  color: #535353;
+}
+#descript .desBlock div p {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=Descript.css.map */
